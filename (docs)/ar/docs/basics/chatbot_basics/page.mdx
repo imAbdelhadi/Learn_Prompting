@@ -1,6 +1,6 @@
-export const metadata = { sidebar_position: 94, title: "🟢 Chatbots" };
+export const metadata = { sidebar_position: 94, title: "🟢 روبوتات الدردشة " };
 
-# 🟢 Chatbots
+# 🟢 روبوتات الدردشة 
 
 <div style={{ textAlign: "center" }}>
   <Image
@@ -18,42 +18,53 @@ export const metadata = { sidebar_position: 94, title: "🟢 Chatbots" };
 <br />
 
 <Takeaways>
-  - How chatbots work - Why chatbots are better than non-chatbots
+  - كيفية عمل روبوتات الدردشة  - لماذا تُعتبر روبوتات الدردشة أفضل من غيرها
 </Takeaways>
 
-In the realm of artificial intelligence, there are various types of <Term term="LLM">LLM</Term>s that serve different purposes. One of the most commonly used models in this course is ChatGPT, a chatbot that remembers previous messages, so that you can have a conversation with it. However, chatbots are not the only type of LLM. Another example is GPT-3, an earlier AI developed by OpenAI, which unlike chatbots, has no memory. Both GPT-3 and ChatGPT can perform basic tasks such as answering questions and generating summaries.
+في مجال الذكاء الاصطناعي، هناك أنواع مختلفة من نماذج اللغة التي تخدم أغراضًا مختلفة. واحد من أكثر النماذج المستخدمة في هذه الدورة هو ChatGPT، وهو روبوت دردشة يتذكر الرسائل السابقة، لذا يمكنك إجراء محادثة معه. ومع ذلك، روبوتات الدردشة ليست النوع الوحيد من نماذج اللغة. على سبيل المثال، هناك GPT-3، وهو نموذج ذكاء اصطناعي تم تطويره مؤخرًا بواسطة OpenAI، الذي على عكس روبوتات الدردشة، لا يتذكر أية معلومات سابقة. يمكن لكل من GPT-3 وChatGPT أن يقوما بالمهام الأساسية مثل الإجابة على الأسئلة وكتابة ملخصات.
 
-## How Chatbots Work
+## كيف تعمل روبوتات الدردشة
+تم تصميم روبوتات الدردشة مثل ChatGPT لتحاكي المحادثات التفاعلية. لإجراء محادثة، يجب أن تتذكر روبوتات الدردشة تاريخ المحادثة بالكامل. ما يعنيه ذلك بالنسبة للذكاء الاصطناعي مثل ChatGPT هو أنه في كل مرة ترسل له رسالة جديدة، فإنه يقرأ جميع الرسائل السابقة التي أُرسلتْ من قبلك في نفس الوقت، نظرًا لعدم وجود ذاكرة حقيقية لديه. هذه "الذاكرة" الخاصة بالمحادثة هي العامل الوحيد المهم الذي يميزهم عن غيرهم من الروبوتات.
 
-Chatbots like ChatGPT are designed to simulate interactive conversations. In order to have a conversation, chatbots must remember the entire conversation history. What this means for AIs like ChatGPT is that every time you send them a new message, they read all previous messages that you both sent at the same time, since they don't have a true memory. This 'memory' of conversation is the only important factor that distinguishes them from non-chatbots.
+##  الروبوتات غير المتعلقة بالدردشة 
+GPT-3 هو نوع متكامل من نماذج الذكاء الاصطناعي، بدلاً من أن يكون خاص بالدردشة فقط. هنا مثال يوضح كيف يختلف عن ChatGPT:
 
-## Non-chatbots
-
-GPT-3 is a `complete` type of model, rather than `chat`[^a]. Here is an example that shows you how it differs from ChatGPT:
-
-<AIInput>What is 2+</AIInput>
-
-<AIOutput title="GPT-3 output">
-  2
-
-  2+2 = 4
+التعليمة:
+<AIOutput>
+ما هو 2+
 </AIOutput>
 
-<AIOutput title="ChatGPT output">
-  It seems like you didn't complete your question. If you meant to ask "What is 2 + 2?" then the answer is 4. If you have a different question or need further assistance, feel free to ask!
+بالإنجليزية:
+<AIOutput>
+What is 2+
 </AIOutput>
 
-We can see that GPT-3 has completed our input with what it felt were the most probable next characters. On the other hand, ChatGPT has responded to us as if we suddenly stopped speaking in a conversation. The conversationality of chatbots makes using them feel more natural to use, so most people prefer them over other AIs. However, the most signifigant reason that chatbots are better is that companies like OpenAI and Anthropic have built chatbots that are very smart, and can better respond to your prompts[^b].
+خرج GPT-3:
+<AIOutput>
+2
+2 + 2 = 4
+</AIOutput>
 
-## Tokens
+خرج ChatGPT:
+<AIOutput>
+يبدو أنك لم تكمل سؤالك. إذا كنت تقصد أن تسأل "ما هو ناتج 2 + 2؟"، فإن الإجابة هي 4. إذا كان لديك سؤال مختلف أو تحتاج إلى مساعدة إضافية، فلا تتردد بالسؤال!
+</AIOutput>
 
-Gen AI like ChatGPT don't read words in the same way that we do. While we would read the sentence "I don't like eggs" word by word, they might break it into their own version of words, and read it like this: `I`, `don`, `'t` `like` `egg` `s`. These "words" are called tokens, and they are used in nearly every modern Gen AI. Each token is then converted into a list of numbers, so the AI can process it. You don't need to know why Gen AIs use tokens, but they are important to understand when considering pricing and _context length_.
+بالإنجليزية:
+<AIOutput>
+It seems like you didn't complete your question. If you meant to ask "What is 2 + 2?" then the answer is 4. If you have a different question or need further assistance, feel free to ask!
+</AIOutput>
 
-## Context Length
+يمكننا أن نرى أن GPT-3 قد أكمل الدخل باستخدام ما اعتبره العناصر القادمة الأكثر احتمالًا. من ناحية أخرى، ردَّ ChatGPT علينا كما لو أننا توقفنا فجأة عن التحدث في المحادثة. يبدو استخدام روبوتات الدردشة أكثر طبيعية بوجود طابع المحادثة، لذلك يفضلها معظم الناس على غيرها من نماذج الذكاء الاصطناعي. ومع ذلك، السبب الأكثر أهمية لتفضيل روبوتات الدردشة هو أن شركات مثل OpenAI وAnthropic قد صمّمت روبوتات دردشة ذكية جدًا، ويمكنها الاستجابة بشكل أفضل لتعليماتك.
 
-Context length[^l] refers to the amount of text that a language model can consider when generating a response. For both chatbots and non-chatbots, there is a maximum limit to the context length they can handle[^c]. If the conversation or text exceeds this limit, the model will not be able to remember the entire conversation when generating a response. This is why it is sometimes necessary to restate important information or re-prime the chatbot.
+## الرموز
+لا يقرأ الذكاء الاصطناعي التوليدي مثل ChatGPT الكلمات بنفس الطريقة التي نقرأها نحن. بينما نقرأ الجملة "لا أحب البيض" كلمة بكلمة، قد يقسمها إلى نسخته الخاصة من الكلمات، ويقرأها بهذا الشكل: أنا، لا، أحب، البيض. هذه "الكلمات" تسمى رموز tokens، وتُستخدم في معظم نماذج الذكاء الاصطناعي التوليدي. ثم يتم تحويل كل رمز إلى قائمة من الأرقام، حتى يتمكن الذكاء الاصطناعي من معالجته. ليس عليك معرفة سبب استخدام الذكاء الاصطناعي التوليدي للرموز، ولكنها مهمة لفهم آلية التسعير وطول السياق.
 
-750 words is approximately 1,000 tokens[^d]. ChatGPT can remember 4K tokens, while more advanced versions of ChatGPT can remember up to 16K tokens. GPT-4 can process up to 32K tokens, and Anthropic's AI, [Claude](https://www.anthropic.com/index/100k-context-windows), can handle up to 100K tokens. Deciding which model to use is sometimes a trade off between pricing and the need for longer context lengths. ChatGPT will be sufficient for this course.
+## طول السياق
+يشير طول السياق إلى كمية النص التي يمكن لنموذج اللغة أن يأخذها في الاعتبار عند توليد استجابة. بالنسبة لكل من روبوتات الدردشة وغيرها من الروبوتات، هناك حد أقصى لطول السياق الذي يمكنهم التعامل معه. إذا تجاوزت المحادثة أو النص هذا الحد، فإن النموذج لن يتمكن من تذكر المحادثة بأكملها عند توليد استجابة. ولهذا السبب قد يكون من الضروري في بعض الأحيان إعادة ذكر المعلومات المهمة أو إعادة تهيئة روبوت الدردشة.
+
+750 كلمة تقريبًا تعادل 1000 رمز. يمكن لـ ChatGPT أن يتذكر 4 آلاف رمز، في حين يمكن للإصدارات المتقدمة من ChatGPT أن تتذكر حتى 16 ألف رمز. يمكن لـ GPT-4 معالجة ما يصل إلى 32 ألف رمز، ويمكن للذكاء الاصطناعي لشركة Anthropic وClaude، التعامل مع ما يصل إلى 100 ألف رمز. اختيار النموذج المناسب يعتمد أحيانًا على التوازن بين التسعير والحاجة إلى طول سياق أطول. سيكون ChatGPT كافي لهذه السلسلة.
+
 
 [^a]: There are other types of non-chatbots, which we will see in the next lesson.
 [^b]: Sometimes non-chatbots are preferable if you want more concise outputs that `complete` your text. We will learn about how to access GPT-3 in the next lesson.
