@@ -1,6 +1,6 @@
 export const metadata = {
   sidebar_position: 10,
-  title: "🟢 Prompting With ChatGPT",
+  title: "🟢 كتابة التعليمات باستخدام ChatGPT",
 };
 
 # 🟢 Prompting With ChatGPT
@@ -17,91 +17,101 @@ export const metadata = {
 <br />
 
 <Takeaways>
-  - Set up ChatGPT - Use ChatGPT to summarize text and solve a math problem
+  - تهيئة ChatGPT. - استخدام ChatGPT لتلخيص النصوص وحل المسائل الرياضية.
 </Takeaways>
 
-In the previous module, we discussed AI and how humans can instruct AIs to perform tasks.
-Using a prompt to instruct an AI to do a task is called prompting(@shin2020autoprompt). We will explore prompting with [ChatGPT](http://chat.openai.com)[^a], a very popular Large Language Model , that can understand and write text. It was developed by OpenAI, and is currently the easiest Gen AI to work with. It is also completely free to use.
+تحدثنا في الدرس السابق عن الذكاء الاصطناعي AI وكيف يرشده البشر للقيام بالمهام. إن استخدام تعليمة لإرشاد الذكاء الاصطناعي للقيام بمهمة يدعى بكتابة تعليمة. سندرس كتابة التعليمات باستخدام ChatGPT، وهو نموذج لغة كبير (LLM) يمكنه فهم وكتابة النصوص. تم تطويره من قبل OpenAI الذي يعدّ أسهل ذكاء اصطناعي توليدي يمكن العمل عليه، كما أنّه مجاني الاستخدام.
+## تهيئة ChatGPT
+للبدء باستخدام ChatGPT اتبع الخطوات التالية:
+* اذهب إلى http://chat.openai.com
+* سيطلب منك إنشاء حساب. قم بذلك.
+* سجل الدخول بالحساب.
+التالي هو فيديو يبيّن لك كيفية تهيئة Chat GPT.
+https://youtu.be/FMEzy2jo84c
+## اختبار بعض التعليمات على ChatGPT
+بعدما أصبح لديك ChatGPT لنجرب بعض التعليمات: 
+1. لون العشب
+سنبدأ بمثال بسيط هل يمكن لـ Chat GPT معرفة لون العشب؟
 
-## Set up ChatGPT
+التعليمة:
+```
+ما لون العشب؟
+```
 
-To get started with ChatGPT, follow these steps:
+باللغة الإنجليزية:
+```
+What color is grass?
+```
+الخرج:
+```
+العشب أخضر
+```
 
-- Navigate to [http://chat.openai.com](http://chat.openai.com)
-- It should ask you to make an account. Go ahead and do so.
-- Log in with this account
+باللغة الإنجليزية:
+```
+Grass is green
+```
+يمكنه بالفعل معرفة لون العشب، الآن لنجرب مثالًا أكثر إفادة
+2. تلخيص مقال
+لنقل أنك تقرأ مقالًا عن الثلج في فلوريدا. وتريد الفكرة الأساسية من المقال بسرعة، لذا تقدم المقال الذي تقرأه للذكاء الصنعي وتطلب منه ملخصًا للمقال. 
 
-Here is a video that shows you how to get setup with ChatGPT.
+التعليمة:
+```
+من النادر جدًا أن تُثلج في ولاية فلوريدا في الولايات المتحدة وخصوصًا في الأجزاء الوسطى والجنوبية منها. باستثناء الأجزاء الشمالية القصوى من الولاية، معظم المدن الكبرى في فلوريدا لا تسجل أي ثلج يُذكر، ولكن تم تسجيل ثلج قليل أو عواصف ثلجية في الهواء عدة مرات في القرن. حسب خدمة الطقس الوطنية لم يسجل أي عاصفة ثلجية منذ الاستعمار الأوروبي في جزر فلوريدا كي وكي ويست منذ 300 سنة مضت. هناك تقرير واحد عن العواصف الثلجية في ميامي وفورت لودرديل وبالم بيتش منذ 200 عام. حصل ذلك في عام 1977 في يناير. وعلى أي حال لم تشاهد ميامي وفورت لودرديل وبالم بيتش أي ثلوج قبل أو بعد عام 1977.
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/FMEzy2jo84c"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-></iframe>
+لخص هذه المقطع في جملة واحدة.
+```
 
-## Test Some Prompts on ChatGPT
-
-Now that we have ChatGPT set up, let's test out some prompts.
-
-#### 1) Color of Grass
-
-We will start with something very simple: can ChatGPT tell us the color of grass?
-
-<AIInput>What color is grass?</AIInput>
-
-<AIOutput>Grass is green.</AIOutput>
-
-Indeed it can, now let's try a more useful example.
-
-#### 2) Summarizing an Article
-
-Say you are reading an article about snowfall in Florida. You want to quickly get the main ideas of the article, so you show the AI what you are reading, and ask for a summary[^b]:
-
-<AIInput>
+باللغة الإنجليزية:
+```
 It is very rare for snow to fall in the U.S. state of Florida, especially in the central and southern portions of the state. With the exception of the far northern areas of the state, most of the major cities in Florida have never recorded measurable snowfall, though trace amounts have been recorded, or flurries in the air observed few times each century. According to the National Weather Service, in the Florida Keys and Key West there is no known occurrence of snow flurries since the European colonization of the region more than 300 years ago. In Miami, Fort Lauderdale, and Palm Beach there has been only one known report of snow flurries observed in the air in more than 200 years; this occurred in January 1977. In any event, Miami, Fort Lauderdale, and Palm Beach have not seen snow flurries before or since this 1977 event.
 
 Summarize this paragraph in a single sentence:
+```
 
-</AIInput>
+كان هذا جواب Chat GPT، إنه أقصر بشكل واضح!
 
-Here is ChatGPT's response. It is a much shorter read!
+الخرج:
+```
+الثلوج نادرة في فلوريدا، باستثناء المناطق في أقصى الشمال، وهناك حالة واحدة لعاصفة ثلجية في الهواء تم تسجيلها في المدن الكبيرة ميامي وفورت لودرديل وبالم بيتش منذ 200 عام.
+```
 
-<AIOutput>
-  Snowfall is extremely rare in Florida, with the exception of the far northern
-  areas, and only one instance of snow flurries in the air has been recorded in
-  the major cities of Miami, Fort Lauderdale, and Palm Beach in the last 200
-  years.
-</AIOutput>
+باللغة الإنجليزية:
+```
+Snowfall is extremely rare in Florida, with the exception of the far northern areas, and only one instance of snow flurries in the air has been recorded in the major cities of Miami, Fort Lauderdale, and Palm Beach in the last 200 years.
+```
 
-<Caution>
-  You will likely see a slightly different output. This will be the case for
-  most prompts in this course. We will learn why later in this module.
-</Caution>
+> تحذير: غالباً ما تحصل على مخرجات مختلفة. وهذا يشمل لمعظم التعليمات في هذه الدورة. سنتعرف لاحقًا على السبب في هذا الدليل.
 
-#### 3) Math Problem Solving
+3. حل المسائل الرياضية
+يمكن أن يحل ChatGPT المسائل الرياضية! لنعطيه تعليمة بمسألة بسيطة.
 
-ChatGPT can also solve math problems! Let's give it a prompt with a simple problem.
+التعليمة:
+```
+إذا كان لديّ 20 تفاحة، أكلت ثلاثًا منها، وبعت ثلاثة أبضًا، كم يبقى لدي؟
+```
 
-<AIInput>
-  If I have 20 apples, eat three of them, and sell three more, how many do I
-  have left?
-</AIInput>
+باللغة الإنجليزية:
+```
+If I have 20 apples, eat three of them, and sell three more, how many do I have left?
 
-<AIOutput>
+```
+
+الخرج:
+```
+إذا كان لديك 20 تفاحة وأكلت ثلاثًا منها سيبقى لديك 20-3=17 تفاحة
+بعد أكل ثلاث تفاحات (17 باقي) إذا بعت ثلاثة أيضًا، سيبقى لديك 17-3=14 تفاحة
+```
+
+باللغة الإنجليزية:
+```
 If you have 20 apples and you eat three of them, you will have 20 - 3 = 17 apples left.
-
 After eating three apples (17 left), if you sell three more, you will have 17 - 3 = 14 apples left.
+```
 
-</AIOutput>
+## الخاتمة
+والآن أصبحت التعليمات مألوفة لك وأصبحت تعرف كتابة بعض التعليمات البسيطة باستخدام ChatGPT. تذكر أن التعليمة هي فعل أو اسم. يمكنك كتابة تعليمة للنموذج كأنك تقوم بها بنفسك أو إعطاؤه تعليمة ليضع نفسه مكانك. وتعني الجملتان الشيء ذاته. يسمى فعل إعطاء النموذج تعليمة "كتابة تعليمة prompting". سنتعلم أكثر عن كتابة التعليمات في الدرس القادم.
 
-## Conclusion
-
-You should now be comfortable with what a %%prompt|prompt%% is, and how to do some basic prompting with ChatGPT.
-Keep in mind that _prompt_ can be a verb or a noun. You can _prompt_ a model or you can _give_ a model a prompt. These two phrases mean the same thing. The action of giving a model a prompt is called prompting. We will learn more about prompting in the next lesson.
 
 [^a]: GPT-4 is another model developed by OpenAI that is more advanced, but costs money.
 [^b]: This paragraph is from https://en.wikipedia.org/wiki/Snow_in_Florida
