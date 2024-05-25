@@ -1,48 +1,84 @@
-export const metadata = { sidebar_position: 30, title: "🟢 Study Buddy" };
+export const metadata = { sidebar_position: 30, title: "🟢 زميل الدراسة" };
 
-# 🟢 Study Buddy
+# 🟢 زميل الدراسة
 
-One of our favorite ways to use LLMs is as a study tool! In particular, it is useful for explaining confusing terms as well as quizzing you on test content.
+أحد أساليبنا المفضلة لاستخدام نماذج اللغات الكبيرة هو استخدامها كأداة دراسية! لكونها مفيدة في شرح المصطلحات الصعبة وكذلك لاختبار فهمك وتمكنك من محتوى ما.
 
-## Explaining Terms
+## شرح المصطلحات
 
-I was recently reading a textbook about Cacti(@nobel2002cacti), and saw this passage:
+كنت أقرأ مؤخرًا كتابًا عن الصبار، ورأيت هذا المقطع:
 
-```text
-Because of adaptations to xeric conditions and the presence of **less derived woods** in Pereskioideae, the Cactaceae is one of the most interesting families both anatomically and morphologically.
-```
+<AIOutput>
+بسبب التكيف مع ظروف الجفاف ووجود أخشاب أقل تطورًا في فصيلة الصبار (Pereskioideae)، تعد عائلة الصبار (Cactaceae) واحدة من أكثر العائلات إثارة للاهتمام من الناحية التشريحية والشكلية.
+</AIOutput>
 
-I had no idea what **less derived woods** meant, and Google only showed research articles on it. I decided to use ChatGPT to find out what it meant. I gave it the following prompt, which is simple the passage from the book and my question.
+بالإنجليزية:
+<AIOutput>
+Because of adaptations to xeric conditions and the presence of **less derived woods** in Pereskioideae, the Cactaceae is one of the most interesting families both anatomically and morphologically. 
+</AIOutput>
+لم أكن أعلم ماذا تعني **وجود أخشاب أقل تطورًا** ، وكانت نتائج بحث Google تظهر فقط مقالات بحث حول هذا المصطلح. قررت استخدام ChatGPT لمعرفة معناه. قدمت له التعليمة التالية، التي تتضمن ببساطة المقطع من الكتاب وسؤالي.
+<AIOutput>
+بسبب التكيفات مع ظروف الجفاف ووجود أخشاب أقل تطورًا في فصيلة الصبار (Pereskioideae)، تعد عائلة الصبار (Cactaceae) واحدة من أكثر العائلات إثارة للاهتمام من الناحية التشريحية والصرفية
+ماذا تعني أخشاب أقل تطورًا؟
+في هذا السياق، يشير "أخشاب أقل تطورًا" إلى الشكل الأصلي أو البدائي للخشب الذي يوجد في التطور الأولي للنباتات. تخلو هذه الأخشاب من الهياكل والميزات المتخصصة التي تطورت لاحقًا في النباتات الأكثر تطورًا. في فصيلة Pereskioideae ضمن عائلة الصبار، يكون الخشب أقل تطورًا مقارنةً بفصائل أخرى ويشبه أكثر الخشب الذي يوجد في نباتات غير الصبار. يُعتقد أن الخشب أقل التطور في Pereskioideae هو تكيف مع البيئات الأكثر رطوبة وأقل جفافًا التي تنمو فيها هذه النباتات بالمقارنة مع الصبارات الآخرى.
+</AIOutput>
 
-```text {6-6}
-Because of adaptations to xeric conditions and the presence of less derived woods in Pereskioideae, the Cactaceae is one of the most interesting families both anatomically and morphologically.
+بالإنجليزية:
+
+<AIOutput>
+Because of adaptations to xeric conditions and the presence of less derived woods in Pereskioideae, the Cactaceae is one of the most interesting families both anatomically and morphologically. 
 
 What do less derived woods mean?
 
-
 In this context, "less derived woods" refers to the ancestral or primitive form of wood found in the early evolution of plants. These woods lack specialized structures and features that evolved later in more derived or advanced plants. In the Pereskioideae subfamily of the Cactaceae family, the wood is less derived compared to other subfamilies and is more similar to the wood found in non-cactus plants. The less derived wood in Pereskioideae is thought to be an adaptation to the more humid and less xeric environments in which these plants grow compared to other cacti.
-```
+</AIOutput>
 
-The model was able to answer my question quickly and I was able to continue with my reading.
+تمكن النموذج من الإجابة على سؤالي بسرعة، وتمكنت من متابعة قراءتي.
 
-## Quizzing Yourself
+## اختبر نفسك
 
-Another way to use LLMs as a study tool is to quiz yourself. If you have an upcoming calculus test, you could simply ask:
+طريقة أخرى لاستخدام نماذج اللغات الكبيرة كأداة دراسية  تستخدم لإجراء اختبار ذاتي. إذا كان لديك اختبار قادم في مادة الحساب، يمكنك ببساطة أن تسأل:
+<AIOutput>
+أنشئ 5 أسئلة اختبار لمادة الحساب التفاضلي:
 
-```text {4-8}
+1. ما هو مشتق للدالة \(y = x^3\)؟
+2. حساب التكامل غير المحدد للدالة \(x^3 + 5x^2 + 7x + 4\).
+3. ما هي قاعدة الضرب للاشتقاقات؟
+4. اعثر على معادلة المستقيم المماس للدالة \(y = x^2\) في النقطة (4، 16).
+5. ما هي المشتق الثاني للدالة \(y = x^4\)؟
+</AIOutput>
+بالإنجليزية:
+<AIOutput>
 Generate 5 calculus I quiz questions for me:
-
 
 1. What is the derivative of y = x3?
 2. Evaluate the indefinite integral of x3 + 5x2 + 7x + 4.
 3. What is the product rule for derivatives?
 4. Find the equation of the line tangent to y = x2 at the point (4, 16).
 5. What is the second derivative of y = x4?
-```
+</AIOutput>
+إذا كنت تدرس موضوعًا أكثر تحديدًا، قد تحتاج إلى تزويد النموذج بمزيد من المعلومات، على سبيل المثال، ملاحظات صفك!
+<AIOutput>
+تاريخ: 20 آذار 2020 الساعة 2:30 مساءً
+ملاحظات صف درس التسويق
+* ناقشنا الـ 4 P's في التسويق: المنتج، السعر، المكان، الترويج.
+* الفرق بين B2C و B2B: B2C هو السوق المباشر للمستهلك، B2B هو التعامل بين الشركات.
+* أنواع مختلفة من أبحاث السوق: كمية ونوعية، مثل الاستطلاعات وجلسات الحوار المركزة.
+* استراتيجيات التسعير: السبر، الاختراق، المنافسة، و القيمة.
+* التفصيل: تقسيم قاعدة الزبائن حسب العمر والدخل، إلخ.
+* 4 أنواع من التفصيل: الديمغرافي، الجغرافي، النفسي، والسلوكي.
+* ناقشنا أدوات الترويج المختلفة: الإعلان، البيع الشخصي، العلاقات العامة، التسويق المباشر، وتعزيز المبيعات.
 
-If you are studying a more specific topic, you may need to give the model additional information, for example your class notes!
+أنشئ 5 أسئلة اختبار للتسويق بناءً على ملاحظاتي:
 
-```text {16-20}
+1.  ما هي الـ 4 P's في التسويق؟
+2.  ما الفرق بين B2C و B2B؟
+3.  ما هي نوعين من أبحاث السوق؟
+4.  ما هي 4 أنواع من التفصيل؟
+5.  سمّ 5 أدوات ترويجية.
+</AIOutput>
+بالإنجليزية:
+<AIOutput>
 3/20/2020 2:30 PM
 
 Marketing Class Notes
@@ -57,14 +93,13 @@ Marketing Class Notes
 
 Generate 5 marketing quiz questions for me based on my notes:
 
-
 1. What are the 4 P's of marketing?
 2. What is the difference between B2C and B2B?
 3. What are two types of market research?
 4. What are 4 types of segmentation?
 5. Name 5 promotional tools.
-```
+</AIOutput>
+## الخاتمة
 
-## Conclusion
+هناك وسائل أخرى لاستخدام النماذج اللغوية الكبيرة في عمليات الدراسة. تستخدم العديد من الشركات التعليمية مثل Duolingo و Quizlet بنماذج اللغات الكبيرة في منتجاتها.
 
-There are probably other ways to use LLMs to study. Many learning companies like Duolingo and Quizlet are implementing LLMs into their products.
