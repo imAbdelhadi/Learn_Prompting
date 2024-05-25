@@ -1,30 +1,41 @@
-export const metadata = { sidebar_position: 0, title: "🟢 Structuring Data" };
+export const metadata = { sidebar_position: 0, title: "🟢 هيكلة البيانات" };
 
-# 🟢 Structuring Data
+# 🟢 هيكلة البيانات
 
-One simple and exciting use case for LLMs is organizing data into tables. Perhaps you have a bunch of news articles or business reports, and you would like all of the important points to be summarized in a table that you can then put into a spreadsheet or database. Chat bots like ChatGPT can help you do this.
+من الأمثلة البسيطة والممتعة للنماذج اللغوية الكبيرة LLMs هو تنظيم البيانات في جداول. أي عندما يكون لديك مجموعة من الأخبار أو تقارير العمل وتريد أن تكون النقاط الرئيسيّة منسّقةً في جدولٍ يمكن نقله إلى ورقة عمل أو قاعدة بيانات. يمكن لروبوتات الدردشة مثل ChatGPT أن تساعدك على إنجاز المهمة.
 
-We can extract information from the following report by appending `Generate a table containing this information:` to it.
+يمكننا استخراج المعلومات من التقرير التالي عن طريق إنشاء جدولٍ يحتوي المعلومات التالية فيه، بإضافة `Generate a table containing this information:` (أي أنشئ جدولًا يحتوي على هذه المعلومات)
 
-```text
-In a recent business report presentation, the CEO of Zana Corp. highlighted their remarkable growth in the past fiscal year. She shared that the company experienced a 15% increase in revenue, reaching $50 million, with a 12% profit margin ($6 million in net profit). The report also showcased a 20% growth in their customer base, now totaling 100,000 customers. Additionally, the company's operating expenses went up by 10%, amounting to $10 million, while the employee headcount increased by 25%, resulting in a current workforce of 500 employees.
+التعليمة:
+```
+في العرض التقديمي الأخير لتقرير سير العمل حديث، سلّط الرئيس التنفيذي لشركة Zana Corp الضوء على نموها الملحوظ مادّياً في السنة الماضية. وأوضح أن الشركة شهدت زيادة في الإيرادات بنسبة 15%، لتصل إلى 50 مليون دولار، مع هامش ربح 12% (حيث أنّ صافي الربح يساوي 6 ملايين دولار). كما أظهر التقرير نموًا بنسبة 20% في قاعدة عملائهم، والتي يبلغ مجموعها الآن 100000 عميل. بالإضافة إلى ارتفاع المصاريف التشغيلية للشركة بنسبة 10%، لتصل إلى 10 ملايين دولار، وأخيراً زاد عدد الموظفين بنسبة 25%، ليصل عدد القوى العاملة الحالية إلى 500 موظف.
+
+أنشئ جدولاً يحتوي على هذه المعلومات:
+```
+
+بالإنجليزية:
+```
+In a recent business report presentation, the CEO of Zana Corp. highlighted their remarkable growth in the past fiscal year. She shared that the company experienced a 15% increase in revenue, reaching $50 million, with a 12% profit margin ($6 million in net profit). The report also showcased a 20% growth in their customer base, now totaling 100,000 customers. Additionally, the company's operating expenses went up by 10%, amounting to $10 million, while the employee headcount increased by 25%, resulting in a current workforce of 500 employees. 
 
 Generate a table containing this information:
 ```
 
-ChatGPT will output a table like the following:
+سيكون خرج الذّكاء الاصطناعي مشابهاً للتالي:
 
-| Metric                      | Value       |
-| --------------------------- | ----------- |
-| Revenue                     | $50 million |
-| Profit Margin               | 12%         |
-| Net Profit                  | $6 million  |
-| Customer Base               | 100,000     |
-| Operating Expenses          | $10 million |
-| Employee Headcount          | 500         |
-| Revenue Increase            | 15%         |
-| Customer Increase           | 20%         |
-| Operating Expenses Increase | 10%         |
-| Employee Headcount Increase | 25%         |
 
-You can then copy and paste it into a spreadsheet like Excel/Sheets or even documents and powerpoints.
+
+|المؤشر|القيمة|
+| -------- | -------- |
+|الإيرادات|50 مليون دولار| 
+|هامش الربح|12%|
+|صافي الربح|6 مليون دولار|
+|عدد العملاء|100,000|
+|مصاريف التشغيل| 10 مليون دولار     |
+|عدد الموظفين|500|
+|نسبة زيادة الإيرادات|15%|
+|نسبة زيادة العملاء|20%|
+|نسبة زيادة مصاريف التشغيل|10%|
+|نسبة زيادة عدد الموظفين|25%|
+
+بعد ذلك يمكنك نسخ الجدول إلى ورقة عمل إكسل أو جوجل أو حتّى إلى الملفات النصية وعروض البوربوينت.
+
