@@ -1,59 +1,91 @@
-export const metadata = { sidebar_position: 50, title: "🟢 Contracts" };
+export const metadata = { sidebar_position: 50, title: "🟢 العقود" };
 
-# 🟢 Contracts
+# 🟢 العقود
 
-Tired of reading and writing long, boring contracts? AI can help!
+هل تعبت من كتابة وقراءة العقود الطويلة والمملة؟ يمكن أن يساعدك الذكاء الاصطناعي على تسهيل ذلك!
 
 <Warning>
-  Obligatory: I am not a lawyer and nothing in this post should be taken as
-  legal advice.
+  أنا لسا محاميًا ولا يجب أخذ أي معلومة مذكورة هنا كنصيحة قانونية.
 </Warning>
-## Reading Contracts
 
-### Clarifying Legal Language
+## قراءة العقود
+### توضيح اللغة القانونية
+يجب قراءة العقود بشكل دقيق دومًا. إذا لم تفهم شيئًا أو ليس لديك الوقت لذلك يجب التكلم مع محامي، ولكن يمكن استخدام الذكاء الاصطناعي لمساعدتك في حال كنت قد تقرأ وواجهت صعوبة في فهم قسم ما.
 
-You should always read contracts carefully. If you don't understand something, or don't have time to do so, _you should talk to a lawyer_. However, if you are reading through and have trouble understanding a section, you can use AI to help you understand it.
+التالي هو قسم من اتفاقية عدم تصريح non-disclosure agreement) NDA).
 
-Here is some language from an NDA (non-disclosure agreement):
+```
+حيث، المتعاقد لديه أو ربما يعرف بعض المعلومات السرية و/أو أسرار تجارية لكيان حكومي؛ و
+حيث، يرغب الكيان الحكومي في صمان المعلومات السرية أو الأسرار التجارية محمية من التصريح؛ و
+حيث، يوافق المتعاقد لضمان سرية هذه المعلومات حسب الشروط والقواعد لهذه الاتفاقية.
+الآن، إذًا، بأخذ الوعود والتعهدات المشتركة بعين الاعتبار هنا، يتوافق الفريقان على التالي:
+```
 
-```text
+بالإنجليزية:
+```
 WHEREAS, the Contractor has or may become privy to confidential information and/or trade secrets of the Government Entity; and
-
 WHEREAS, the Government Entity desires to ensure that its confidential information and trade secrets are protected from disclosure; and
-
 WHEREAS, the Contractor agrees to maintain the confidentiality of such information pursuant to the terms and conditions of this Agreement.
-
 NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the parties agree as follows:
 ```
 
-When I first set out into the world of legalities, I really did not understand the use of WHEREAS and NOW, THEREFORE. Let's see what ChatGPT has to say about it:
+لم افهم استخدام "حيث" و"الآن" وإذًا عندما دخلت إلى عالم الأمور القانونية، لنرى ما يقول ChatGPT عنها:
+```
+حيث، المتعاقد لديه أو ربما يعرف بعض المعلومات السرية و/أو أسرار تجارية لكيان حكومي و
 
-```text {11-11}
+حيث، يرغب الكيان الحكومي في صمان المعلومات السرية أو الأسرار التجارية محمية من التصريح و
+
+حيث، يوافق المتعاقد لضمان سرية هذه المعلومات حسب الشروط والقواعد لهذه الاتفاقية
+
+الآن، إذًا، بأخذ الوعود والتعهدات المشتركة بعين الاعتبار هنا، يتوافق الفريقان على التالي
+
+اقرأ لغة اتفاقية عدم التصريح التالية وفسر الكلمات بحروف كبيرة
+```
+بالإنجليزية:
+```
 WHEREAS, the Contractor has or may become privy to confidential information and/or trade secrets of the Government Entity; and
-
 WHEREAS, the Government Entity desires to ensure that its confidential information and trade secrets are protected from disclosure; and
-
 WHEREAS, the Contractor agrees to maintain the confidentiality of such information pursuant to the terms and conditions of this Agreement.
-
 NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the parties agree as follows:
-
 Read the above NDA language and explain what the words in all caps are saying:
+```
 
+الخرج:
+```
+إن الكلمات بحروف كبيرة هي مصطلحات قانونية تضع في سياق وهدف هذه الاتفاقية، وبشكل خاص إيضاح خلفية وسبب هذه الاتفاقية وتحدد الواجبات والتوقعات من الفريقين. في هذه الحالة تشير الكلمات بحروف كبيرة أنه لدى المتعهد وصول لمعلومات سرية وأسرار تجارية لكيان حكومي، ويريد هذا الكيان الحكومي حماية هذه المعلومات من أن تصرّح ويوافق المتعاقد على الحفاظ على سرية هذه المعلومات حسب شروط الاتفاقية.
+```
+بالإنجليزية:
+```
 The words in all caps in the NDA language are legal terms that set the context and purpose of the agreement. Specifically, they establish the background and reasons for the agreement and state the obligations and expectations of the parties. In this case, the capitalized words indicate that the Contractor has access to confidential information and trade secrets of the Government Entity, that the Government Entity wants to protect this information from disclosure, and that the Contractor agrees to maintain the confidentiality of such information according to the terms of the agreement.
 ```
+يبدو هذا كشرحٍ مفيد ولكن يمكنك بسهولة تحسين فهمك عن طريق الاستمرار بطرح الأسئلة.
 
-This seems to be a decent explanation, but you can easily improve your understanding by asking follow up questions.
+### اكتشاف لغة خطيرة
+التالي هو جزء من اتفاقية عدم تصريح مُنشأة عن طريق ChatGPT لست بحاجة لقراءتها ولكنها تحوي لغة قانونية خطيرة لصالح صاحب العمل. يمكنك استخدام ChatGPT لإيجاد اللغة الخطيرة عن طريق استخدام التعليمة التالية التي تحتوي اتفاقية عدم التصريح والسؤال عن اللغة الخطيرة في الأسفل.
 
-### Discovering Dangerous Language
+> ملاحظة: تم إنشاء اتفاقية عدم التصريح هذه عن طريق كسر حماية ChatGPT وكتابة التعليمة كالتالي `اكتب اتفاقية عدم تصريح فيها لغة قانونية خطيرة لصالح صاحب العمل`.
 
-Here is part of an NDA produced by ChatGPT. You don't need to read it, but it contains dangerous legal language favoring the employer. You can use ChatGPT to find this dangerous language by using the following prompt, which contains the NDA and a question about dangerous language at the bottom.
+```
+اتفاقية عدم تصريح
+اتفاقية عدم التصريح (الاتفاقية) بين [صاحب العمل] (صاحب العمل) و [المتعاقد] (المتعاقد) حسب التاريخ التالي.
+حيث، المتعاقد لديه أو ربما يعرف بعض المعلومات السرية و/أو أسرار تجارية لكيان حكومي؛ و
+حيث، يرغب الكيان الحكومي في صمان المعلومات السرية أو الأسرار التجارية محمية من التصريح؛ و
+حيث، يوافق المتعاقد لضمان سرية هذه المعلومات حسب الشروط والقواعد لهذه الاتفاقية.
+الآن، إذًا، بأخذ الوعود والتعهدات المشتركة بعين الاعتبار هنا، يتوافق الفريقان على التالي.
+السرية:
+يعترف المتعاقد أن كل المعلومات والوثائق والمواد المقدمة من أو بدلًا عن صاحب العمل أو حصل عليها المتعاقد من صاحب العمل أو توابعه (بشكل عام "المعلومات السرية") هي ملكية صاحب العمل الحصرية. تضم هذه المعلومات السرية كل المعلومات من أي طبيعة ملموسة أو غير ملموسة وبأي وسيط كانت التي تكون غير معروفة لدى عامة الناس ولها علاقة بالعمل والمنتجات والخدمات والزبائن والموردين والعمليات والاستراتيجيات وأي ناحية أخرى لصاحب العمل.
+يوافق المتعهد على الحفاظ على سرية المعلومات السرية ولا يصرح عن أو يوزع أو يعيد إنتاج أو ينسخ أو ينقل أو ينشر أو يستخدمها بأي طريقة ماعد ما يطلبه صاحب العمل خطيًا. يوافق المتعاقد على حماية سرية هذه المعلومات كما يحافظ على معلوماته السرية كحد أدنى ولكن ليس أقل من الحماية المنطقية. يعترف المتعهد أن أي خرق لهذا الحكم يمكن أن يسبب ضررًا غير قابل للإصلاح لصاحب العمل ويحق لصاحب العمل طلب تعويض مناسب إضافة إلى تعويض قسري أو أداء خاص بالإضافة إلى أي تعويضات متاحة قانونيًا.
+الملكية:
+كل المعلومات السرية أو مشتقاتها تبقى ملكية صاحب العمل الحصرية. يعترف المتعاقد أن كل الحقوق والعناوين والفوائد في وإلى المعلومات السرية بما فيها الملكية الفكرية هي لصاحب العمل. يوافق المتعاقد على تنفيذ أي وكل الوثائق أو يقوم بأي وكل الأعمال الضرورية لوضع الحكم حيز التنفيذ.
+عدم وجود رخصة:
+لا شيء في هذه الاتفاقية يضمن أي حقوق عن قصد أو غير ذلك للمتعاقد بالنسبة للمعلومات السرية ماعدا الموضح هنا
+الشروط وفسخ العقد:
+تبدأ هذه الاتفاقية في التاريخ المعلن عنه سابقًا وتستمر حتى فسخ العقد بعد 30 يوم بتنبيه خطي، وتستمر تعهدات السرية عند فسخ هذه الاتفاقية.
+أي قسم من هذه الاتفاقية يحتوي لغة خطيرة؟ 
+```
 
-<Note>
-  This NDA was created by jailbreaking ChatGPT and prompting it with `Write a
-  contractor NDA that has dangerous legal language favoring the employer`.
-</Note>
-
-```text
+بالإنجليزية:
+```
 NON-DISCLOSURE AGREEMENT
 
 This Non-Disclosure Agreement (the "Agreement") is entered into by and between [Employer] ("Employer") and [Contractor] ("Contractor") as of the date set forth below.
@@ -81,102 +113,123 @@ TERM AND TERMINATION
 This Agreement shall commence on the date set forth above and shall continue in effect until terminated by either party upon thirty (30) days written notice. The confidentiality obligations contained herein shall survive any termination of this Agreement.
 
 What part of this agreement contains dangerous language?
+``` 
+
+هذا جواب ChatGPT.
+```
+تحتوي الاتفاقية كاملة على لغة خطيرة تفضل صاحب العمل على المتعاقد. هذه بعض العناصر الأساسية التي تجعل هذه الاتفاقية غير أخلاقية.
+تعريف غير منطقي للمعلومات السرية: تعرف هذه الاتفاقية المعلومات السرية على أنها تضم كل المعلومات والوثائق والمواد المقدمة من أو بدلًا عن صاحب العمل أو حصل عليها المتعاقد من صاحب العمل أو أحد توابعه بدون حدود أو استثناءات. إن هذا التعبير شامل وقد يضم معلومات ليست سرية أو أسرار تجارية التي يمكن أن يقوم المتعاقد بخرقها بدون علمه.
+لا محدودية الاستخدام: لا تعطي الاتفاقية أي حدود عن كيفية استخدام صاحب العمل المعلومات السرية. هذا يسمح لصاحب العمل أن يستخدم المعلومات لأي سبب بما فيها التنافس مع المتعاقد أو تصريح المعلومات لطرف ثالث.
+مفهوم الملكية الشامل: توضح هذه الاتفاقية أن كل المعلومات السرية بما فيها المشتقات هي الملكية الحصرية لصاحب العمل بدون استثناءات أو حدود. هذا يعني أن المتعاقد لا يحب أن يستخدم أو يستفيد من أي معلومة فترة عمله مع صاحب العمل حتى لو طور المتعاقد المعلومات بشكل مستقل أو من مصادر أخرى.
 ```
 
-Here is ChatGPT's response.
-
-```text {1-7}
+بالإنجليزية:
+```
 The entire agreement contains dangerous language that favors the Employer over the Contractor. Here are some of the key elements that make this agreement unethical:
-
 Unreasonable Definition of Confidential Information: The agreement defines the Confidential Information to include all information, documents, and materials provided by or on behalf of the Employer, or obtained by the Contractor from the Employer or its affiliates, without any limitations or exclusions. This definition is broad and could potentially include information that is not actually confidential or trade secret information, which could cause the Contractor to unknowingly breach the agreement.
-
 No Limitations on Use: The agreement does not provide any limitations on how the Employer can use the Confidential Information. This could allow the Employer to use the information for any purpose, including competing with the Contractor or disclosing the information to third parties.
-
 Broad Definition of Ownership: The agreement states that all Confidential Information, including all derivatives thereof, shall remain the exclusive property of the Employer, with no exceptions or limitations. This means that the Contractor may not use or benefit from any information obtained through their work for the Employer, even if the Contractor developed the information independently or with other resources.
 ```
 
-Althought I am not a lawyer, I think `Unreasonable Definition of Confidential Information` is particularly relevant.
+أنا لست محاميًا ولكنني أعتقد أنّ التعريف غير المنطقي للمعلومات السرية مهم بشكل خاص.
+يمكن استخدام هذه التقنية للتحقق من المحتوى القانوني الخطير على مجال واسع من الوثائق القانونية. وجدنا أيضًا أدوات يمكن بناؤها على GPT-3 لإيجاد لغة خطيرة في اتفاقيات TOS والتوظيف.
 
-This technique of checking for dangerous legal content can be used for a range of legal documents. We have even seen tools being built on top of GPT-3 to detect dangerous language in TOS agreements and employment contracts.
-
-## Writing Contracts
-
-From the previous section, we saw that ChatGPT can write NDAs. It also does a good job with other common documents like terms of use and terms of service. However, when you are dealing with less common documents, you will need to be more careful.
-
-I recently wrote one such document mostly using GPT-3, then had it reviewed by a lawyer. They mentioned 1-2 things that could be slightly improved, but overall it was a robust document. Some people in industry are performing this process, where they generate a document using GPT-3, then have it reviewed by a lawyer. This saves time and costs.
-
-Let's pretend to be a government contractor and write a contract for a someone doing some defense work. We will use the following prompt:
-
-```text {5-59}
+## كتابة العقود
+رأينا من القسم السابق أن ChatGPT يستطيع كتابة اتفاقيات عدم التصريح. وهو جيد أيضًا في كتابة المستندات العامة الأخرى مثل شروط الاستخدام وشروط الخدمة، ولكن عند التعامل مع المستندات الأقل شيوعًا ستحتاج أن تكون دقيقًا أكثر.
+كتبت مستندًا مشابهًا باستخدام GPT-3 وراجعتها مع محامي، وذكر لي بضعة أشياء يمكن تحسينها ولكنه كان مستندًا متكاملًا عمومًا. يستخدم بعض الناس هذه الطريقة حيث يُنشئون مستند باستخدام GPT-3 ويراجعها محامي. هذا يوفر الوقت والتكلفة.
+لنعتبر أننا متعاقد حكومي ونريد كتابة عقد لشخص للقيام ببعض الأعمال الدفاعية. سنستخدم التعليمة التالية:
+```
+أنت محامي لمتعاقد حكومي. أنت تكتب عقدًا لمتعاقد فرعي للقيام ببعض الأعمال الجوية. يجب أن يكون العقد متكاملًا ويضم التالي:
+مدة العمل 1.5 سنة وبتكلفة 2.5 مليون$. يتطلب تصريح أمني لأعلى المستويات ويتعلق تطوير دفاعات صومعة صاروخ نووي سري. سيُدفع للمتعاقد الفرعي 1.5 مليون$ مقدمًا والـ 1مليون$ الباقية على دفعات لمدة 6 أشهر. سيتطلب على المتعهد الفرعي توقيع اتفاقية عدم تصريح. سيتطلب من المتعهد الفرعي توقيع اتفاقية عدم التماس. سيتطلب من المتعهد توقيع اتفاقية عدم تحايل.
+```
+بالإنجليزية:
+```
 You are a lawyer for a government contractor. You are writing a contract for a subcontractor to do some aerospace work. The contract should be robust and should include the following:
 The job will last for 1.5 years and will be worth $2.5 million. It requires top secret clearance and relates to secret nuclear silo defense development. The subcontractor will be paid $1.5 million upfront and the remaining $1 million will be paid in 6 monthly installments. The subcontractor will be required to sign a non-disclosure agreement. The subcontractor will be required to sign a non-compete agreement. The subcontractor will be required to sign a non-solicitation agreement. The subcontractor will be required to sign a non-circumvention agreement.
-
-
+```
+الخرج:
+```
+اتفاقية متعهد فرعي
+اتفاقية المتعهد الفرعي (الاتفاقية) بين [المتعاقد الحكومي] (المتعاقد) و [المتعاقد الفرعي] (المتعاقد الفرعي) حسب التاريخ التالي
+مجال العمل
+يقوم المتعهد الفرعي العمل الموصوف في إعلان العمل بالشكل المرفق بالمعروض أ (العمل). يترافق هذا العمل لتطوير دفاعات صومعة صاروخ نووي ويتطلب تصريح أمني لأعلى مستوى
+الدفع
+مجمل تكلفة الأعمال هو 2.5مليون$ تُدفع كالتالي
+1.5مليون$ عند تنفيذ الاتفاقية والحصول على التصريح الأمني لأعلى مستوى من المتعاقد الفرعي.
+1مليون$ تُدفع على 6 دفعات شهرية بقيمة 166،666.67$ لكل دفعة، على شرط أن المتعاقد الفرعي يقوم بالعمل على أتم وجه خلال الأشهر السابقة.
+اتفاقية عدم تصريح
+يجب على المتعهد الفرعي توقيع اتفاقية عدم تصريح بالشكل المرفق بالمعروض ب (اتفاقية عدم التصريح). مدة هذه الاتفاقية هي خمس سنوات.
+اتفاقية عدم التنافس
+يجب على المتعهد الفرعي توقيع اتفاقية عدم تنافس بالشكل المرفق بالمعروض ت (اتفاقية عدم التنافس). مدة هذه الاتفاقية هي سنتين بعد انتهاء هذه الاتفاقية
+اتفاقية عدم التماس
+يجب على المتعهد الفرعي توقيع اتفاقية عدم التماس بالشكل المرفق بالمعروض ث (اتفاقية عدم التماس). مدة هذه الاتفاقية هي سنتين بعد انتهاء هذه الاتفاقية
+اتفاقية عدم تحايل
+يجب على المتعهد الفرعي توقيع اتفاقية عدم تحايل بالشكل المرفق بالمعروض ج (اتفاقية عدم التحايل). مدة هذه الاتفاقية هي سنتين بعد انتهاء هذه الاتفاقية
+الشروط والإنهاء
+تبدأ هذه الاتفاقية في التاريخ المحدد سابقًا وتستمر حتى انهاء العمل أو فسخ العقد من أحد الفريقين بعد تنبيه خطي مقدم قبل 30 يوم. كل الحقوق لعدم التصريح وعدم التنافس وعدم التماس وعدم التحايل المحتوات هان تستمر بعد أي فسخ للاتفاقية
+المتعاقد المستقل
+يعتبر المتعاقد الفرعي متعاقد مستقل وليس موظفًا للمتعاقد. يكون المتعاقد الفرعي مسؤول عن ضرائبه ومساهمته في الضمان الاجتماعي والتأمين والمزايا الأخرى.
+يجب على المتعاقد الفرعي تعويض وعدم المساس من المتعاقد لأي طلب أو ضرر أو مسؤولية متعلقة لحالة المتعاقد الفرعي كونه متعاقد مستقل  
+القانون الحاكم والسلطة القضائية
+يتم الحكم في وإنشاء هذه الاتفاقية بحسب قوانين الولاية [ولاية] بدون التأثير على أي قانون أو حكم قانوني. أي خلاف من أو متعلق بهذه الاتفاقية يُحل عن طريق المحاكم حسب قوانين مؤسسة الحكم الأمريكية والحكم على الربح من القاضي يمكن أن يدخل في أي محكمة لديها سلطة قضائية.
+الاتفاقية كاملة
+تشكل هذه الاتفاقية كامل الاتفاقية بين الفريقين وتسبق كل الاتفاقيات والتفاهمات السابقة والحالية مكتوبة أم شفهية المتعلقة بموضوع هذه الاتفاقية. لا يجب تعديل هذه الاتفاقية إلا بشكل خطي موقعة من قبل الفريقين.
+بشهادة الفريقين تم تنفيذ هذه الاتفاقية بالتاريخ المحدد أدناه
+المتعاقد الحكومي
+عن طريق: _______________________
+الاسم: __________________________
+اللقب: ________________________
+المتعاقد الفرعي
+عن طريق: _______________________
+الاسم: __________________________
+اللقب: ________________________
+التاريخ: ____________________
+```
+بالإنجليزية:
+```
 SUBCONTRACT AGREEMENT
-
 This Subcontract Agreement (the "Agreement") is entered into by and between [Government Contractor] ("Contractor") and [Subcontractor] ("Subcontractor") as of the date set forth below.
-
 SCOPE OF WORK
 Subcontractor shall perform the work described in the Statement of Work attached hereto as Exhibit A (the "Work"). The Work relates to the development of secret nuclear silo defense and requires top secret clearance.
-
 PAYMENT
 The total payment for the Work shall be $2.5 million, payable as follows:
-
 $1.5 million upon execution of this Agreement and receipt of top secret clearance by Subcontractor.
 $1 million to be paid in 6 monthly installments of $166,666.67 each, provided that Subcontractor has satisfactorily performed the Work during the preceding month.
 NON-DISCLOSURE AGREEMENT
 Subcontractor shall sign a non-disclosure agreement in the form attached hereto as Exhibit B (the "NDA"). The NDA shall be in effect for the duration of the Agreement and for a period of five years thereafter.
-
 NON-COMPETE AGREEMENT
 Subcontractor shall sign a non-compete agreement in the form attached hereto as Exhibit C (the "NCA"). The NCA shall be in effect for a period of two years after the termination of this Agreement.
-
 NON-SOLICITATION AGREEMENT
 Subcontractor shall sign a non-solicitation agreement in the form attached hereto as Exhibit D (the "NSA"). The NSA shall be in effect for a period of two years after the termination of this Agreement.
-
 NON-CIRCUMVENTION AGREEMENT
 Subcontractor shall sign a non-circumvention agreement in the form attached hereto as Exhibit E (the "NCAg"). The NCAg shall be in effect for a period of two years after the termination of this Agreement.
-
 TERM AND TERMINATION
 This Agreement shall commence on the date set forth above and shall continue in effect until the completion of the Work or until terminated by either party upon thirty (30) days written notice. The non-disclosure, non-compete, non-solicitation, and non-circumvention obligations contained herein shall survive any termination of this Agreement.
-
 INDEPENDENT CONTRACTOR
 Subcontractor is an independent contractor and is not an employee of Contractor. Subcontractor shall be responsible for its own taxes, social security contributions, insurance, and other benefits. Subcontractor shall indemnify and hold Contractor harmless from any claims, damages, or liabilities arising out of or related to Subcontractor's status as an independent contractor.
-
 GOVERNING LAW AND JURISDICTION
 This Agreement shall be governed by and construed in accordance with the laws of the state of [state], without giving effect to any choice of law or conflict of law provisions. Any disputes arising out of or related to this Agreement shall be resolved by arbitration in accordance with the rules of the American Arbitration Association, and judgment upon the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof.
-
 ENTIRE AGREEMENT
 This Agreement constitutes the entire agreement between the parties and supersedes all prior and contemporaneous agreements and understandings, whether written or oral, relating to the subject matter of this Agreement. This Agreement may not be amended or modified except in writing signed by both parties.
-
 IN WITNESS WHEREOF, the parties have executed this Agreement as of the date set forth below.
-
 [Government Contractor]
-
 By: ____________________________
-
 Name: __________________________
-
 Title: ___________________________
-
 [Subcontractor]
-
 By: ____________________________
-
 Name: __________________________
-
 Title: ___________________________
-
 Date: ___________________________
 ```
 
-This is a pretty good start. Imaginably you would want to add more information in the scope, payment, and other sections. This is where you would need to use your own knowledge and experience to start iterating on the document.
+هذه بداية جيدة. أتوقع أنك تريد إضافة المزيد من المعلومات في السياق والدفعات وأقسام أخرى. وهنا تأتي معارفك وخبراتك في بدء تعديل هذا المستند.
 
-## Takeaways
+## ماذا تعلّمنا
+* يمكن أن تستخدم نماذج اللغة الكبيرة في المساعدة في مراجعة وتوضيح الوثائق القانونية.
+* يمكن أن تستخدم نماذج اللغة الكبيرة في المساعدة في إنشاء الوثائق القانونية.
 
-- LLMs can be used to review and clarify legal documents _in an assistive capacity_.
-- LLMs can be used to generate legal documents _in an assistive capacity_.
 
 <Danger>
-  Do not use any legal documents on this page. They are for demonstration
-  purposes only.
+  لا تستخدم أي مستند قانوني في هذه الصفحة. هذ المستندات بهدف التوضيح فقط.
 </Danger>
