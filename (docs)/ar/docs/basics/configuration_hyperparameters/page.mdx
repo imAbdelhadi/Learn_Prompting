@@ -1,6 +1,6 @@
-export const metadata = { sidebar_position: 98, title: "🟢 LLM Settings" };
+export const metadata = { sidebar_position: 98, title: "🟢 إعدادات نموذج اللغة الكبير LLM" };
 
-# 🟢 LLM Settings
+# 🟢 إعدادات LLM
 
 <div style={{ textAlign: "center" }}>
   <Image
@@ -17,41 +17,40 @@ export const metadata = { sidebar_position: 98, title: "🟢 LLM Settings" };
 </div>
 <br />
 
-<Takeaways>- Understand Temperature, Top P, and Maximum Length</Takeaways>
+<Takeaways>- مفهوم العشوائية وTop P و الطول الأعظمي للخرج</Takeaways>
 
-# Introduction
+## مقدمة
+يمكن استخدام بعض إعدادات نموذج اللغة الكبير LLM للتحكم بنواحي مختلفة من النموذج مثل كم هو "عشوائي". يمكن تعديل هذه الإعدادات لإنتاج مخرجات مبدعة ومتنوعة ومشوقة أكثر. من أهم هذه الإعدادات هي العشوائية وTop P والطول الأعظم، ولكن سنتحدث عن كل الإعدادات التي تسمح لنا شركة OpenAI بالتعديل عليها.
 
-We can use certain <Term term="LLM">LLM</Term>[^a] settings to control various aspects of the model, such as how 'random' it is. These settings can be adjusted to produce more creative, diverse, and interesting output. The Temperature, Top P and Max Length settings are most important, but we describe every setting that the OpenAI Playground allows you to modify.
+## العشوائية
+تتحكم بعدم توقعية مخرجات نموذج اللغة. كلما زادت العشوائية temprature تكون المخرجات أكثر إبداعية وأقل توقعًا لأنه يزيد احتمالية الرموز غير المتوقعة ويقلل من احتمالية المتوقعة. بالعكس فإن تقليل العشوائية يعطي نتائج متوقعة وعادية. يوضح المثال التالي الفرق في المخرجات.
 
-## Temperature
+التعليمة:
+```
+ما هي 10 أشياء غريبة وفريدة وممتعة يمكن عملها في الشاطئ؟ اصنع لائحة بدون شرح
+```
+بالإنجليزية:
+```
+What are 10 weird, unique, and fun things to do at the beach? Make a list without descriptions.
+```
 
-<div className="flex flex-col sm:flex-row justify-between">
-  <div className="pr-5">
-    Temperature regulates the unpredictability of a language model's output.
-    With higher temperature settings, outputs become more creative and less
-    predictable as it amplifies the likelihood of less probable tokens while
-    reducing that for more probable ones. Conversely, lower temperatures yield
-    more conservative and predictable results. The following example illustrates
-    these differences in output:
-  </div>
+الخرج  (عشوائية =0 ، Top P=1):
+```
+1. بناء قلعة رملية
+2. جمع الأصداف
+3. لعب كرة الطائرة الشاطئية
+4. اللعب بالطائرة الورقية
+5. القيام بنزهة
+6. تجربة القوارب ذات المجداف
+7. لعب القرص الطائر
+8. الغوص
+9. المشي على الشاطئ لمسافة طويلة
+10. مشاهدة الغروب
+```
 
-  <div className="mt-4 sm:mt-0 sm:ml-auto">
-    <Image
-      src="/docs/assets/basics/openai_temperature.webp"
-      className="img-docs"
-      width={750}
-      height={750}
-      style={{ margin: "auto" }}
-    />
-  </div>
-</div>
-
-<AIInput>
-  What are 10 weird, unique, and fun things to do at the beach? Make a list
-  without descriptions.
-</AIInput>
-<AIOutput title="ChatGPT Output (Temperature=0, Top P = 1)">
-  {`1. Build a sandcastle
+بالإنجليزية:
+```
+1. Build a sandcastle
 2. Collect seashells
 3. Play beach volleyball
 4. Fly a kite
@@ -60,10 +59,23 @@ We can use certain <Term term="LLM">LLM</Term>[^a] settings to control various a
 7. Play frisbee
 8. Go snorkeling
 9. Take a long walk along the shore
-10. Watch the sunset`}
-</AIOutput>
-<AIOutput title="ChatGPT Output (Temperature=1.5, Top P = 1)">
-  {`1. Wade in the shallow waters blowing bubblegum bubbles
+```
+الخرج  (عشوائية =0 ، Top P=1):
+```
+1. الدخول في المياه الضحلة ونفخ بوالين من العلكة
+2. صنع تماثيل معقدة من الرمل
+3. لعب كرة الطائرة الشاطئية بشكل اعتباطي
+4. التنزه في الجروف المقابلة للشاطئ
+5. مشاهدة البشر ومعرفة قصة الشاطئ المتعلق به
+6. تجميع الأصداف لصنع عمل فني شاطئي
+7. تعلم الركمجة أو أي رياضة مائية
+8. البدء بحرب رمل اعتباطية
+9. محاولة صيد السمك على الشاطئ مثل الأشخاص المحليين
+10. القيام بمنافسة ودية عن طريق تنظيم مسابقة بناء قلاع رملية 
+```
+بالإنجليزية:
+```
+1. Wade in the shallow waters blowing bubblegum bubbles
 2. Create intricate sandcastle sculptures
 3. Join an improvised beach volleyball match
 4. Take a scenic hike along the cliffs nearby
@@ -72,179 +84,60 @@ We can use certain <Term term="LLM">LLM</Term>[^a] settings to control various a
 7. Learn to surf or try other water sports
 8. Kickstart a spontaneous sand fight
 9. Attempt shoreline fishing like the locals
-10. Engage in friendly competition by organizing a sandcastle building contest`}
-</AIOutput>
+10. Engage in friendly competition by organizing a sandcastle building contest
+```
 
-The output produced with a higher temperature setting offers a more imaginative and diverse list of activities to do at the beach. This can be very useful for creative writing.
+يعطي الخرج المُنتج بعشوائية أعلى لائحة أكثر إبداعًا وتنوعًا للنشاطات في الشاطئ. هذا مفيد جدًا للكتابة الإبداعية
 
-<Note>
-  If you adjust the temperature too high, you can get non-sensical outputs like
-  `Start a sponge-ball baseball home run contest near Becksmith Stein Man
-  Beach`.
-</Note>
+> ملاحظة: إذ زادت العشوائية لدرجة عالية جدًا ستحصل على مخرجات غير منطقية مثل البدء `بلعبة كرة القاعدة بجانب شاطئ ستاينمان`
 
 ## Top P
+تساعد إعدادات Top P في نموذج اللغة بإدارة عشوائية الخرج. تعمل عن طريق تحديد العتبة الاحتمالية واختيار الرموز التي يفوق مجموعها هذا الحد.
 
-Top P[^b] is a setting in language models that helps manage the randomness of their output. It works by establishing a probability threshold and then selecting tokens whose combined likelihood surpasses this limit.
+مثلًأ، لنختبر هذا المثال حيث سيتنبأ النموذج الكلمة التالية `تسلقت القطة الـ______` . الكلمات الخمسة الأولى التي يفكر فيها هي `شجرة` (احتمالية 0.5) أو `سقف` (احتمالية 0.25) أو `جدار` (احتمالية 0.15)  أو `نافذة` (احتمالية 0.07) و `سجادة` باحتمالية 0.03
 
-<div className="flex flex-col sm:flex-row justify-between">
-  <div className="pr-5">
-    For instance, let's consider an example where the model predicts the next
-    word in <code>The cat climbed up the ___</code>. The top five words it might
-    be considering could be <code>tree</code> (probability 0.5),
-    <code>roof</code> (probability 0.25), <code>wall</code> (probability 0.15),
-    <code>window</code> (probability .07) and <code>carpet</code>, with
-    probability of .03.
-  </div>
+إذا اخترنا Top P لتكون 0.90 سيختار الذكاء الاصطناعي الرموز التي مجموعها على الأقل حوالي 90% وفي حالتنا
+* إضافة `شجرة` -> المجموع الحالي 50%
+* ثم إضافة `سقف` -> يصبح المجموع 75%
+* ثم `جدار` ليصل المجموع إلى 90%
 
-  <div className="mt-4 sm:mt-0 sm:ml-auto">
-    <Image
-      src="/docs/assets/basics/openai_top_p.webp"
-      className="img-docs"
-      width={750}
-      height={750}
-      style={{ margin: "auto" }}
-    />
-  </div>
-</div>
+لذا لإنشاء الخرج، يختار الذكاء الاصطناعي بشكل عشوائي واحدة من هذه الخيارات (`شجرة` و `سقف` و `جدار`) لأنها تشكل حوالي 90 بالمئة من كل الاحتمالات. يمكن لهذه الطريقة إنشاء خيارات أكثر تنوعًا لأنها تجدد الخيارات بناءً على الاحتمال التراكمي بدلًا من الرمز الواحد.
 
-If we set Top P to `.90`, the AI will only consider those tokens which cumulatively add up to at least ~90%. In our case:
+## الطول الأعظمي للخرج
 
-- Adding <code>tree</code> -> total so far is `50%`.
-- Then adding <code>roof</code> -> total becomes `75%`.
-- Next comes <code>wall</code>, and now our sum reaches `90%`.
+هو الطول الأعظم لعدد الرموز التي يُسمح للذكاء الصنعي بإنشائها. تفيد هذه الخاصية لأنها تسمح للمستخدمين بإدارة طول رد النموذج مما يمنع الإجابات الطويلة. يُشارك الطول بين مدخلات `في صندوق حقل التجارب وإجابة` المُنشأة. لاحظ أن الحد 256 مفتاح من مثال PirateGPT أجبره لقطع القصة في منتصف الجملة.
 
-So, for generating output, the AI will randomly pick one among these three options (<code>tree</code>, <code>roof</code>, and <code>wall</code>) as they make up around ~90 percent of all likelihoods. This method can produce more diverse outputs than traditional methods that sample from the entire vocabulary indiscriminately because it narrows down choices based on cumulative probabilities rather than individual token
+![التحكم بالطول الأعظمي للإجابة](https://learnprompting.org/assets/images/openai_maximum_length_example-a180e2134bbda35003badfae7043e83b.webp)
 
-## Maximum Length
+> ملاحظة: هذا يسمح بالتحكم في الكلفة في حال الدفع لاستخدام النموذج من خلال واجهة برمجة التطبيقات بدلًا من استخدام حقل التجارب.
 
-<div className="flex flex-col sm:flex-row justify-between">
-  <div className="pr-5">
-    The maximum length is the total # of tokens the AI is allowed to generate.
-    This setting is useful since it allows users to manage the length of the
-    model's response, preventing overly long or irrelevant responses. The length
-    is shared between the <code>USER</code> input in the Playground box and the{" "}
-    <code>ASSISTANT</code> generated response. Notice how with a limit of 256
-    tokens, our PirateGPT from earlier is forced to cut its story short
-    mid-sentence.
-  </div>
+## إعدادات نموذج اللغة الكبير الأخرى
 
-  <div className="mt-4 sm:mt-0 sm:ml-auto">
-    <Image
-      src="/docs/assets/basics/openai_maximum_length.webp"
-      className="img-docs"
-      width={750}
-      height={750}
-      style={{ margin: "auto" }}
-    />
-  </div>
-</div>
+هناك العديد من الخيارات الأخرى التي تؤثر على خرج نموذج اللغة مثل سلسلة التوقف وعقوبات التواتر والتكرار
 
-<br />
-<div style={{ textAlign: "center" }}>
-  <Image
-    src="/docs/assets/basics/openai_maximum_length_example.webp"
-    className="img-docs"
-    width={2820}
-    height={1678}
-    style={{ width: "80%", margin: "auto" }}
-  />
-</div>
+### سلسلة التوقف
 
-<Note>
-  This also helps control cost if you're paying for use of the model through the
-  API rather than using the Playground.
-</Note>
+تطلب سلسلة التوقف من النموذج بالتوقف عن توليد المخرجات مما يسمح بالتحكم بطول وهيكلية المحتوى. إذا كنت تكتب تعليمة للذكاء الاصطناعي لكتابة ايميل جعل كلمة "أفضل التحيات" أو "المخلص لك" هي سلسلة التوقف يضمن أن النموذج بتوقف قبل تحيات الإنهاء مما يجعل الايميل قصيرًا ومباشرًا. تفيد سلسلة التوقف للمخرجات التي تتوقع أن يكون لها هيكلية معينة مثل الايميلات واللوائح العددية أو الحوارات.
 
-## Other LLM Settings
+![سلسلة التوقف](https://learnprompting.org/assets/images/openai_stop_sequences_example-49161a007ebba4d87d4ef49f5792fe8f.webp)
 
-There many other settings that can affect language model output, such as stop sequences, and frequency and presence penalties.
+### عقوبة التواتر
 
-### Stop Sequences
+تعرقل عقوبة التواتر التكرار في النص المُنشأ بمعاقبة الرموز بشكل متناسب مع تواتر ظهورها. كلما زاد تواتر ظهور الرمز المستخدم في النص كلما قل استخدامه من الذكاء الاصطناعي.
 
-<div className="flex flex-col sm:flex-row justify-between">
-  <div className="pr-5">
-    Stop sequences tell the model when to cease output generation, which allows
-    you to control content length and structure. If you are prompting the AI to
-    write an email, setting "Best regards," or "Sincerely," as the stop sequence
-    ensures the model stops before the closing salutation, which keeps the email
-    short and to the point. Stop sequences are useful for output that you expect
-    to come out in a structured format such as an email, a numbered list, or
-    dialogue.
-  </div>
+### عقوبة التكرار
 
-  <div className="mt-4 sm:mt-0 sm:ml-auto">
-    <Image
-      src="/docs/assets/basics/openai_stop_sequences.webp"
-      className="img-docs"
-      width={750}
-      height={750}
-      style={{ margin: "auto" }}
-    />
-  </div>
-</div>
+عقوبة التكرار هي نفس عقوبة التواتر إلى أنها تعاقب الرموز حسب ظهورها أو عدمه وليس حسب نسبة ظهورها.
 
-<br />
-<div style={{ textAlign: "center" }}>
-  <Image
-    src="/docs/assets/basics/openai_stop_sequences_example.webp"
-    className="img-docs"
-    width={2440}
-    height={1434}
-    style={{ width: "80%", margin: "auto" }}
-  />
-</div>
+## ملاحظات التوقع
 
-### Frequency Penalty
+يمكن ألا يعطي الذكاء الاصطناعي كل مرة نفس المخرجات تمامًا حتى عندما تكون العشوائية وTop P صفر. هذا يعود لعشوائية الحسابات في معالجات الرسوميات في "دماغ" الذكاء الاصطناعي
 
-<div className="flex flex-col sm:flex-row justify-between">
-  <div className="pr-5">
-    Frequency penalty is a setting that discourages repetition in the generated
-    text by penalizing tokens proportionally to how frequently they appear. The
-    more often a token is used in the text, the less likely the AI is to use it
-    again.
-  </div>
+## الخاتمة
 
-  <div className="mt-4 sm:mt-0 sm:ml-auto">
-    <Image
-      src="/docs/assets/basics/openai_frequency_penalty.webp"
-      className="img-docs"
-      width={420}
-      height={132}
-      style={{ margin: "auto" }}
-    />
-  </div>
-</div>
+في النهاية إن الفهم الكامل للإعدادات مثل العشوائية وTop P والطول الأعظمي للخرج وغيرها ضروري عند العمل مع نماذج اللغة. تسمح هذه المعاملات في التحكم الدقيق في مخرجات النموذج لتناسب مهام وتطبيقات محددة. تتحكم بنواحي مثل العشوائية في الإجابة وطول الإجابة وتواتر التكرار وغيرها مما يسجن تعاملك مع الذكاء الاصطناعي
 
-### Presence Penalty
-
-<div className="flex flex-col sm:flex-row justify-between">
-  <div className="pr-5">
-    The presence penalty is similar to the frequency penalty, but flatly
-    penalizes tokens based on if they have occurred or not, instead of
-    proportionally.
-  </div>
-
-  <div className="mt-4 sm:mt-0 sm:ml-auto">
-    <Image
-      src="/docs/assets/basics/openai_presence_penalty.webp"
-      className="img-docs"
-      width={420}
-      height={132}
-      style={{ margin: "auto" }}
-    />
-  </div>
-</div>
-
-## Determinism Note
-
-Even when Temperature and Top-P are set completely to zero, the AI may not give the same exact output every time. This is due to randomness in GPU (graphics processing unit) calculations being done in the AI's "brain".
-
-## Conclusion
-
-In conclusion, mastering settings like temperature, top p, maximum length and others are essential when working with language models. These parameters allow for precise control of the model's output to cater to specific tasks or applications. They manage aspects such as randomness in responses, response length and repetition frequency among other things—all contributing towards improving your interaction with the AI.
-
-Partly written by jackdickens382 and evintunador
+مكتوب جزئيًا بواسطة jackdickens382 وevintunador
 
 [^a]: A more technical word is "configuration hyperparameters"
 [^b]: Also known as Nucleus Sampling
