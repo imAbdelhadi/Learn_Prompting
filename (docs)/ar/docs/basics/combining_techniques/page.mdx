@@ -1,9 +1,9 @@
 export const metadata = {
   sidebar_position: 80,
-  title: "🟢 Combining Techniques",
+  title: "🟢 دمج التقنيات ",
 };
 
-# 🟢 Combining Techniques
+# 🟢 دمج التقنيات 
 
 <div style={{ textAlign: "center" }}>
   <Image
@@ -20,44 +20,64 @@ export const metadata = {
 </div>
 <br />
 
-<Takeaways>- Understand how to combine prompting techniques</Takeaways>
+<Takeaways>- فهم كيفية جمع تقنيات الأوامر </Takeaways>
 
-As we have seen in the previous lessons, prompts can have varying formats and complexity. They can include context, instructions, and multiple input-output examples. However, thus far, we have only examined separate classes of prompts. Combining these different prompting techniques can lead to more powerful prompts.
+كما رأينا في الدروس السابقة، يمكن أن يكون للتعليمات تنسيقات وتعقيدات متنوعة. حيث تشمل السياق، التوجيهات، وأمثلة عديدة للإدخال والإخراج. ومع ذلك، حتى الآن، لقد رأينا أصناف منفصلة من التعليمات فقط. يمكن أن يؤدي دمج هذه الأصناف مع بعضها إلى تعليمات أكثر فاعلية.
 
-## Combining Role and Instruction Prompting
+## دمج التحفيز الدوري والتحفيز التعليمي
+يمكن أيضًا دمج تحفيز الدور والتحفيز التعليمي لإنشاء تعليمات أكثر تعقيدًا. على سبيل المثال، يمكنك توجيه الذكاء الاصطناعي بأن يتخيل نفسه كمؤرخ ثم تقديم توجيهات لمهمة محددة.
 
-Role and instruction prompting can also be combined to create more complex prompts. For example, you could instruct the AI to assume the role of a historian and then provide instructions for a specific task.
-
-<AIInput>
-  You are a historian specializing in the American Civil War. Write a brief
-  summary of the key events and outcomes of the war.
-</AIInput>
-
-The AI's response:
-
+التعليمة:
 <AIOutput>
-The American Civil War, fought from 1861 to 1865, was a pivotal event in the history of the United States. It began primarily as a conflict over the preservation of the Union and the legality of slavery, particularly in the newly admitted western states.
-
-Key events of the war include the Battle of Fort Sumter, which marked the beginning of the conflict; the Battle of Antietam, the bloodiest single-day battle in American history; and the Emancipation Proclamation in 1862, in which President Abraham Lincoln declared that all slaves in Confederate-held territory were to be set free.
-
-The Battle of Gettysburg in 1863 is often considered the war's turning point. The Union's victory there, along with their successful Siege of Vicksburg, gave the North a decisive advantage. The war effectively ended with General Robert E. Lee's surrender at Appomattox Court House in 1865.
-
-The war resulted in approximately 620,000 soldier deaths and an undetermined number of civilian casualties. It ended slavery in the United States, restored the Union, and greatly expanded the powers of the federal government.
-
+أنت مؤرخ مختصّ في الحرب الأهلية الأمريكية. اكتب ملخصًا موجزًا عن أبرز أحداث ونتائج الحرب. 
 </AIOutput>
 
-In this example, the AI assumes the role of a historian and follows the instructions to write a brief summary of the American Civil War. The combination of role and instruction prompting results in a detailed and accurate response.
+بالإنجليزية:
+<AIOutput>
+You are a historian specializing in the American Civil War. Write a brief summary of the key events and outcomes of the war.
+</AIOutput>
 
-## Combining Context, Instruction, and Few Shot Prompting
+الخرج:
+<AIOutput>
+الحرب الأهلية الأمريكية، التي دارت بين عامي 1861 و1865، كانت حدثًا محوريًا في تاريخ الولايات المتحدة. لقد بدأت في الأساس كصراع حول الحفاظ على الاتحاد وحقوق الرق (العبيد)، خاصة في الولايات الغربية المعترف بها حديثًا.
+الأحداث الرئيسية للحرب تشمل معركة فورت سمتر، التي عُدّت بداية الصراع؛ معركة أنتيتام، أكثر معركة دامية في يوم واحد في تاريخ أمريكا؛ وإعلان التحرير في عام 1862، حيث أعلن الرئيس أبراهام لينكولن أنّ جميع العبيد في الأراضي التابعة للكونفدرالية يجب أن يُطلق سراحهم.
+تُعتبر معركة جيتيسبرغ في عام 1863 نقطة تحوّل الحرب. فوز الاتحاد هناك، جنبًا إلى جنب مع نجاحهم في حصار فيكسبورغ، منح الشمال ميزة حاسمة. انتهت الحرب فعليًا باستسلام الجنرال روبرت لي في محكمة أبوماتوكس في عام 1865.
+أسفرت الحرب عن وفاة حوالي 620,000 جندي وعدد غير محدد من الضحايا المدنيين. انتهت بالرق (العبيد) في الولايات المتحدة، وأعادت الاتحاد، وزادت بشكل كبير صلاحيات الحكومة الفدرالية.
+</AIOutput>
 
-This is an example of a prompt that combines context, instruction, and few-shot prompting. The context is provided by the explanation about Twitter and the task of classifying tweets. The instruction is given in the sentence "Make sure to classify the last tweet correctly." The few-shot prompting is demonstrated by the two examples of positive and negative tweets. The AI is then expected to use this combination of context, instruction, and examples to correctly classify the final tweet.
+بالإنجليزية:
+<AIOutput>
+The American Civil War, fought from 1861 to 1865, was a pivotal event in the history of the United States. It began primarily as a conflict over the preservation of the Union and the legality of slavery, particularly in the newly admitted western states.
+Key events of the war include the Battle of Fort Sumter, which marked the beginning of the conflict; the Battle of Antietam, the bloodiest single-day battle in American history; and the Emancipation Proclamation in 1862, in which President Abraham Lincoln declared that all slaves in Confederate-held territory were to be set free.
+The Battle of Gettysburg in 1863 is often considered the war's turning point. The Union's victory there, along with their successful Siege of Vicksburg, gave the North a decisive advantage. The war effectively ended with General Robert E. Lee's surrender at Appomattox Court House in 1865.
+The war resulted in approximately 620,000 soldier deaths and an undetermined number of civilian casualties. It ended slavery in the United States, restored the Union, and greatly expanded the powers of the federal government.
+</AIOutput>
 
-<AIInput>
-Twitter is a social media platform where users can post short messages called "tweets".
-Tweets can be positive or negative, and we would like to be able to classify tweets as
-positive or negative. Here are some examples of positive and negative tweets. Make sure 
-to classify the last tweet correctly.
+في هذا المثال، يتخيل الذكاء الصناعي نفسه كمؤرخ ويلتزم بالتوجيهات لكتابة ملخص موجز عن الحرب الأهلية الأمريكية. يؤدي دمج تقنية تحفيز الدور والتحفيز التعليمي إلى نتيجة تفصيلية ودقيقة.
 
+## الجمع بين السياق والتوجيهات والتحفيز قليل اللقطات
+
+هذا مثال على أمر يجمع بين السياق والتعليمات والأوامر عديدة الأمثلة. يُوفر السياق من خلال شرح حول منصة تويتر ومهمة تصنيف التغريدات. تُعطى التوجيهات في الجملة "تأكد من تصنيف التغريدة الأخيرة بشكل صحيح." ويُعرض التحفيز قليل اللقطات من خلال مثالين عن التغريدات الإيجابية والسلبية. يُتوقع من الذكاء الاصطناعي استخدام هذا الجمع بين السياق والتوجيه والأمثلة لتصنيف التغريدة النهائية بشكل صحيح.
+
+التعليمة:
+<AIOutput>
+تويتر هو منصة تواصل اجتماعي حيث يمكن للمستخدمين نشر رسائل قصيرة تسمى "تغريدات". يمكن أن تكون التغريدات إيجابية أو سلبية، ونريد أن نكون قادرين على تصنيف التغريدات إلى إيجابية أو سلبية. فيما يلي بعض الأمثلة للتغريدات الإيجابية والسلبية. تأكد من تصنيف التغريدة الأخيرة بشكل صحيح.
+
+س: التغريدة: "ما أجمل هذا اليوم!"
+هل هذه التغريدة إيجابية أم سلبية؟
+ج: إيجابية
+
+س: التغريدة: "أكره هذا الصف"
+هل هذه التغريدة إيجابية أم سلبية؟
+ج: سلبية
+
+س: التغريدة: "أحب الجيوب في بنطال الجينز"
+ج:
+</AIOutput>
+
+بالإنجليزية:
+<AIOutput>
+Twitter is a social media platform where users can post short messages called "tweets". Tweets can be positive or negative, and we would like to be able to classify tweets as positive or negative. Here are some examples of positive and negative tweets. Make sure to classify the last tweet correctly. 
 Q: Tweet: "What a beautiful day!"
 Is this tweet positive or negative?
 
@@ -72,8 +92,8 @@ Q: Tweet: "I love pockets on jeans"
 
 A:
 
-</AIInput>
+</AIOutput>
 
-## Conclusion
+## الخاتمة
+الجمع بين استراتيجيات الأوامر المختلفة يمكن أن يؤدي إلى تعليمات أكثر قوة وفعالية. تجمع أغلب التعليمات التي تكتبها استراتيجيات متعددة. وأثناء استمرارك في تجربة وتحسين تعليماتك، فكّر في كمّ التقنيات المختلفة التي يمكن جمعها لتحقيق النتائج المرغوبة.
 
-Combining different prompting strategies can lead to more powerful and effective prompts. Almost all prompts you write will combine multiple strategies. As you continue to experiment with and refine your prompts, consider how different techniques can be combined to achieve your desired results.
