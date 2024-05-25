@@ -1,29 +1,56 @@
-export const metadata = { sidebar_position: 30, title: "🟢 Blogs" };
+export const metadata = { sidebar_position: 30, title: "🟢 التدوين" };
 
-# 🟢 Blogs
+# 🟢 التدوين
 
 <Takeaways>
-  - AI can significantly reduce the time to write a blog post - You still need
-  to be involved in this process
+  - يمكن للذكاء الاصطناعي تقليل الوقت اللازم لكتابة تدوينة بشكل ملحوظ. - ما زلت بحاجة إلى المشاركة في هذه العملية.
 </Takeaways>
 
-What if you could write a blog post in 5 seconds?
+ماذا لو كنتَ قادرًا على كتابة تدوينة في خمس ثوانٍ؟
 
-Frankly, you can't. But AI can **significantly** reduce the time it takes to write a blog post.
+بصراحة، لا يمكنك ذلك، ولكن يمكن للذكاء الاصطناعي **بشكل كبير** تقليل الوقت المتطلب لكتابة تدوينة.
 
-This page covers the basics of using AI to help you write a blog. The process should be iterative: you should be writing prompts, seeing what the model outputs, taking pieces of the output, and repeating this.
+يغطي هذا الدرس أساسيات استخدام الذكاء الاصطناعي لمساعدتك على كتابة تدوينة، ويجب أن تكون العملية تكرارية: أذ يجب عليك كتابة التعليمات ورؤية خرج النموذج واستخدام أجزاء من الخرج وتكرار ذلك.
 
-As an example, pretend you work at a nursery and are drafting an article about "Why Christmas Cacti are a great buy". I always like to start with an outline, so let's begin with the following prompt:
+كمثال، تخيل أنك تعمل في حضانة وتكتب تدوينة موضوعها "لماذا عليك شراء صبّار العيد؟". أحب دائمًا أن أبدأ بهيكل عام، لذا دعونا نبدأ بالتعليمة التالية:
 
-<AIInput>
-  Write an outline for a short blog post about why Christmas Cacti are a great
-  buy.
-</AIInput>
-
+التعليمة:
 <AIOutput>
-I. Introduction
-A. Overview of Christmas Cacti
-B. Benefits of owning a Christmas Cacti
+اكتب مخططًا لتدوينة قصيرة تتكلم عن فوائد شراء صبار العيد.
+</AIOutput>
+
+بالإنجليزية:
+<AIOutput>
+Write an outline for a short blog post about why Christmas Cacti are a great buy.
+</AIOutput>
+
+الخرج:
+<AIOutput>
+1. المقدمة
+أ. نظرة عامة على صبار العيد
+ب. فوائد امتلاك صبار العيد
+
+2. صبار العيد مقبول التكلفة
+أ. تكلفة صبار العيد
+ب. مقارنة بينه وبين نباتات الزينة الأخرى
+
+3. لصبار العيد عمر طويل
+أ. متوسط عمر صبار العيد
+ب. متطلبات عناية منخفضة
+
+4. صبار العيد تشكّل هدايا رائعة
+أ. لون وشكل فريد للأزهار
+ب. سهولة العناية وتدوم لمدة طويلة
+
+5. الختام
+أ. ملخص لفوائد امتلاك صبار العيد
+ب. أين تجد صبار العيد
+ت. اقتراحات للاعتناء بصبار العيد
+</AIOutput>
+
+بالإنجليزية:
+<AIOutput>
+I. Introduction A. Overview of Christmas Cacti B. Benefits of owning a Christmas Cacti
 
 II. Christmas Cacti Are Affordable
 A. Cost of Christmas Cacti
@@ -41,74 +68,113 @@ V. Conclusion
 A. Summary of Benefits of Owning a Christmas Cacti
 B. Where to Find a Christmas Cacti
 C. Suggestions for Care and Maintenance
-
 </AIOutput>
 
-Wow, that's quite comprehensive. Maybe we want a slightly shorter post, so let's ask the AI to write a shorter version using this prompt:
+مذهل! إن الوصف شامل للغاية. ربّما نريد منشوراً أقصر قليلًا، لذا دعونا نسأل الذكاء الاصطناعي ليكتب نسخة أقصر باستخدام هذه التعليمة:
 
-<AIInput>
-  That's a great outline, but a bit long. Condense it to the main points:
-</AIInput>
+تعليمة:
+<AIOutput>
+هذا مخطّطٌ عظيم، ولكنه طويل قليلًا. لخصه إلى النقاط الرئيسية.
+</AIOutput>
 
-<Note>
-  We are assuming that you are using ChatGPT (if not, just put the outline
-  before this new prompt)
-</Note>
+> ملاحظة: نحن نفترض أنك تستخدم ChatGPT (إن لم تكن تستخدمه، كلّ ما عليك فعله هو وضع المخطط قبل هذه التعليمة الجديدة).
 
-Here is the model output:
+إليك خرج النموذج:
 
 <AIOutput>
-I. Introduction 
-A. Overview of Christmas Cacti
+1. المقدمة: نظرة عامة على صبار العيد
+2. الفوائد
+أ. معقول السّعر
+ب. مدى حياة طويل
+ت. هدايا رائعة
+3. الخاتمة
+أ. ملخص الفوائد
+ب. أين يمكن إيجاده
+ت. اقتراحات للعناية والصيانة
+</AIOutput>
+
+بالإنجليزية:
+<AIOutput>
+I. Introduction A. Overview of Christmas Cacti
 
 II. Benefits
 A. Affordable
 B. Long Lifespan
-C. Great Gifts
+C. Great Gifts 
 
 III. Conclusion
 A. Summary of Benefits
 B. Where to Find
 C. Suggestions for Care and Maintenance
-
 </AIOutput>
 
-Perfect! Now let's ask it to use this outline to write a full blog post:
+رائع! الآن لنسأله استخدام هذا المخطط ليكتب تدوينة كاملة حول الموضوع:
 
-<AIInput>
-  Write a short blog post using this outline about why Christmas Cacti are a
-  great buy.
-</AIInput>
+تعليمة:
+<AIOutput>
+اكتب تدوينة قصيرة موضوعها التشجيع على شراء صبار العيد مستخدماً هذا المخطط
+</AIOutput>
 
+بالإنجليزية:
+<AIOutput>
+Write a short blog post using this outline about why Christmas Cacti are a great buy.
+</AIOutput>
+
+الخرج:
+<AIOutput>
+نباتات صبار العيد هي اختيار رائع لموسم العطلات! إنها خيار قليل التكلفة ويدوم لمدة طويلة، ما يجعلها هدايا رائعة. يسهل العثور على نباتات صبار العيد في معظم محلات الحدائق والنباتات، وتتراوح أسعارها من بضعة دولارات إلى أسعار أغلى، حسب حجم وشكل النبات.
+
+تُعرف هذه النباتات أيضًا بعمرها الطويل إذا تم العناية بها بشكل صحيح، إذ يمكن أن تستمر لسنوات عديدة، مما يوفر لأصدقائك وعائلتك تذكيرًا دائم الخضرة بروح العطلة. يتسم صبار العيد بتكاليف عناية منخفضة نسبيًا ويتطلب رعاية قليلة، مما يجعله خيارًا رائعًا لشخص ليس لديه الكثير من الخبرة في النباتات. يجب وضعه في مكان مشرق ومشمس، وسقيه بانتظام، وتقديم السماد النباتي كل شهر تقريبًا.
+
+عمومًا، تُعد نباتات صبار العيد هدية رائعة للمناسبات، فهي قليلة التكلفة، ولها عمر طويل، وتُقدم كهدايا رائعة. مع العناية والاهتمام القليلين، يمكن لهذه النباتات أن توفر تذكيرًا جميلًا بموسم العطلات لسنوات قادمة.
+</AIOutput>
+
+بالإنجليزية:
 <AIOutput>
 Christmas Cacti are a great buy for the holiday season! They are an affordable and long-lasting option that make great gifts. Christmas Cacti are easy to find in most garden and plant stores, and they range in price from a few dollars to more expensive, depending on the size and shape of the plant.
 
-These plants are also known for their long lifespan. If cared for properly, they can last for many years, providing your friends and family with an evergreen reminder of the holiday spirit. Christmas Cacti are fairly low maintenance and require minimal care, making them a great option for someone who does not have a lot of experience with plants. They should be placed in a bright and sunny spot, watered regularly, and given plant food every month or so.
+These plants are also known for their long lifespan. If cared for properly, they can last for many years, providing your friends and family with an evergreen reminder of the holiday spirit. Christmas Cacti are fairly low maintenance and require minimal care, making them a great option for someone who does not have a lot of experience with plants. They should be placed in a bright and sunny spot, watered regularly, and given plant food every month or so. 
 
 Overall, Christmas Cacti are a great buy for the holidays. They are affordable, have a long lifespan, and make great gifts. With minimal care and attention, these plants can provide a beautiful reminder of the holiday season for years to come.
-
 </AIOutput>
 
-Alright, that seems pretty good. We probably want to add some information about our company and our pricing on Christmas Cacti, so let's use the following prompt:
+حسنًا، يبدو أنه جيد جدًا. ولكن ربما نحتاج إلى إضافة بعض المعلومات حول شركتنا وأسعار نباتات صبار العيد عندنا، لذا دعونا نستخدم التعليمة التالية:
 
-<AIInput>
-  Perfect! Add a paragraph at the end about our company and pricing on Christmas
-  Cacti. Company: Prickly Point Nursery Price for a Christmas Cacti: $10-$25
-</AIInput>
+التعليمة:
+<AIOutput>
+رائع! أضف مقطع في النهاية عن شركتنا والأسعار لصبار العيد.
+الشركة: "حاضنة نقطة الشوك" سعر نبات صبار العيد: 10-25 دولارًا.
+</AIOutput>
 
-Here is the model output:
+بالإنجليزية:
+<AIOutput>
+Perfect! Add a paragraph at the end about our company and pricing on Christmas Cacti. Company: Prickly Point Nursery Price for a Christmas Cacti: $10-$25.
+</AIOutput>
 
+إليك خرج النموذج:
+
+<AIOutput>
+نباتات صبار العيد هي اختيار رائع لموسم العطلات! إنها خيار ميسور التكلفة ويدوم لمدة طويلة، مما يجعلها هدايا رائعة. يسهل العثور على نباتات صبار العيد في معظم محلات الحدائق والنباتات، وتتراوح أسعارها من بضعة دولارات إلى أسعار أغلى، حسب حجم وشكل النبات.
+
+تعتبر هذه النباتات أيضًا معروفة بعمرها الطويل. إذا تم العناية بها بشكل صحيح، يمكن أن تستمر لسنوات عديدة، مما يوفر لأصدقائك وعائلتك تذكيرًا دائم الخضرة بروح العطلة. يتسم صبار العيد بصيانة منخفضة نسبيًا ويتطلب رعاية أدنى، مما يجعله خيارًا رائعًا لشخص ليس لديه الكثير من الخبرة في النباتات. يجب وضعها في مكان مشرق ومشمس، وسقيها بانتظام، وتقديم الطعام النباتي كل شهر تقريبًا.
+
+بشكل عام، تُعد نباتات صبار العيد صفقة رائعة للعطلات. إنها ميسورة التكلفة، ولها عمر طويل، وتُقدم هدايا رائعة. مع العناية والاهتمام القليلين، يمكن لهذه النباتات أن توفر تذكيرًا جميلًا بموسم العطلات لسنوات قادمة.
+
+في حاضنة نقطة الشوك، نتخصص في توفير نباتات وزهور عالية الجودة تلبي احتياجات الجميع. نحن فخورون بتقديم مجموعة واسعة من نباتات صبار العيد بأسعار رائعة. تتراوح الأسعار من 10 دولارات للنباتات الصغيرة إلى 25 دولارًا للنباتات الأكبر، لذا فإنكم متأكدون من العثور على النبات المثالي لأي ميزانية. فريقنا دائمًا في خدمتكم لتقديم النصائح المفيدة والتلميحات حول كيفية العناية بنباتاتكم، حتى تتمكنوا من الاحتفاظ بجمال وانتعاش نباتات صبار العيد على مدى السنوات القادمة. شكرًا لاختياركم حضانة نقطة الشوك لاحتياجات نباتات العطلات الخاصة بكم!
+</AIOutput>
+
+بالإنجليزية:
 <AIOutput>
 Christmas Cacti are a great buy for the holiday season! They are an affordable and long-lasting option that make great gifts. Christmas Cacti are easy to find in most garden and plant stores, and they range in price from a few dollars to more expensive, depending on the size and shape of the plant.
 
-These plants are also known for their long lifespan. If cared for properly, they can last for many years, providing your friends and family with an evergreen reminder of the holiday spirit. Christmas Cacti are fairly low maintenance and require minimal care, making them a great option for someone who does not have a lot of experience with plants. They should be placed in a bright and sunny spot, watered regularly, and given plant food every month or so.
+These plants are also known for their long lifespan. If cared for properly, they can last for many years, providing your friends and family with an evergreen reminder of the holiday spirit. Christmas Cacti are fairly low maintenance and require minimal care, making them a great option for someone who does not have a lot of experience with plants. They should be placed in a bright and sunny spot, watered regularly, and given plant food every month or so. 
 
 Overall, Christmas Cacti are a great buy for the holidays. They are affordable, have a long lifespan, and make great gifts. With minimal care and attention, these plants can provide a beautiful reminder of the holiday season for years to come.
 
 At Prickly Point Nursery, we specialize in providing high quality plants and flowers for everyone's needs. We are proud to offer an extensive range of Christmas Cacti at great prices. Prices range from $10 for smaller plants to $25 for larger ones, so you're sure to find the perfect one for any budget. Our staff is always on hand to provide helpful advice and tips on how to care for your plants, so you can keep your Christmas Cacti looking fresh and beautiful for years to come. Thank you for considering Prickly Point Nursery for your holiday plant needs!
-
 </AIOutput>
 
-This is a pretty good blog post!
+هذه تدوينة جيدة للغاية!
 
-When I write content, I usually just use ChatGPT or GPT-3, but there are a number of other tools that can help you write blogs, like [Jasper.ai](https://www.jasper.ai/) and [Copy.ai](https://www.copy.ai/). These usually rely on GPT-3 behind the scenes, but they have a number of other features that can help you write content.
+غالبًا ما أستخدم ChatGPT أو GPT-3 عند كتابة المحتوى، ولكن هناك عدد من الأدوات الأخرى التي يمكن أن تساعدك في كتابة المدونات, مثل [Jasper.ai]( https://www.jasper.ai/) و [Copy.ai](https://www.copy.ai/) غالبًا ما تعتمد هذه الأدوات على GPT-3 خلف الكواليس ولكنها تحتوي على العديد من الميزات الأخرى التي يمكن أن تساعدك في كتابة المحتوى.
+
