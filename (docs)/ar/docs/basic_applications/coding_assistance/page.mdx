@@ -1,69 +1,64 @@
-export const metadata = { sidebar_position: 40, title: "🟡 Coding Assistance" };
+export const metadata = { sidebar_position: 40, title: "🟡 مساعد البرمجة" };
 
-# 🟡 Coding Assistance
+# 🟡 مساعد البرمجة
 
-You can use LLMs for debugging, code generation, reformatting, commenting, and more. One popular chatbot claims it can work with code in over 40 programming languages.
+يمكنك استخدام ChatGPT لأغراض تصحيح الأخطاء وتوليد الشيفرة البرمجية وإعادة تنسيقها وإضافة التعليقات والمزيد، كما يمكن أن يتعامل مع الشيفرة البرمجية باستخدام أكثر من 40 لغة برمجة.
 
-| Very Old | Old       | Recent        | Bleeding Edge  |
-| -------- | --------- | ------------- | -------------- |
-| BASIC    | Perl      | Swift         | Kotlin         |
-| Assembly | Pascal    | TypeScript    | Julia          |
-| Fortran  | PHP       | Rust          | Crystal        |
-| Lisp     | Python    | Kotlin/Native | Racket         |
-| COBOL    | C         | Julia (GPU)   | Lua            |
-| Algol    | C++       | Go            | Zig            |
-| SNOBOL   | Java      | Dart          | Nim            |
-| RPG      | Smalltalk | Elixir        | Crystal (LLVM) |
-| Forth    | Tcl       | Groovy        | Vlang          |
-| Ada      | SQL       | Scala Native  | Erlang         |
+| قديمة جدًّا | قديمة | حديثة | مؤخّرة |
+| -------- | -------- | -------- | -------- |
+| BASIC | Perl | Swift | Kotlin |
+| Assembly | Pascal | TypeScript | Julia |
+| Fortran | PHP | Rust | Crystal |
+| Lisp |	Python | Kotlin/Native | Racket |
+| COBOL | C | Julia (GPU) | Lua |
+| Algol 	 | C++‎ | Go | Zig |
+| SNOBOL |Java | Dart | Nim |
+| RPG | Smalltalk | Elixir | Crystal (LLVM) |
+| Forth | Tcl | Groovy | Vlang |
+| Ada | SQL | Scala Native | Erlang |
 
-## Code Generation
 
-Instructing ChatGPT, or any other LLM-based AI chatbot, to generate code is as simple as this:
+## توليد الشيفرات
 
-```text
+عملية توجيه ChatGPT لتوليد شيفرة برمجية بسيطةً جداً وهي بالشكل:
+
+**التعليمة**
+```
+تصرّف كمبرمج بايثون مبتدئ. رجاءً، اكتب الشيفرة لإنشاء لعبة Mad Libs باستخدام 3 مصفوفات، كل منها يحتوي على 6 عناصر: حروف الجر، الأفعال، والأسماء، مع استخدام الأسماء أيضًا كعناصر مباشرة. وبعد كتابتها،  نفّذ الشيفرة.
+```
+
+بالإنجليزية:
+```
 Act as a junior python programmer. Please write the code to generate madlibs from 3 arrays of 6 items each: prepositions, verbs and nouns, with the nouns also being used as direct objects. After writing it, execute the code.
 ```
 
-The output will be something like:
 
-```python {1-13}
+**الخرج**:
+```
 import random
-
 prepositions = ['at', 'in', 'on', 'with', 'under', 'over']
 verbs = ['run', 'jump', 'dance', 'sing', 'laugh', 'cry']
 nouns = ['cat', 'dog', 'tree', 'flower', 'book', 'computer']
-
 preposition = random.choice(prepositions)
 verb = random.choice(verbs)
 noun = random.choice(nouns)
-
 madlib = f"I {verb} {preposition} the {noun}."
-
 print(madlib)
 ```
 
-Try it here:
+جربه هنا:
+<iframe
+    src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjowLCJ0ZW1wZXJhdHVyZSI6MCwibWF4VG9rZW5zIjoyNTYsIm91dHB1dCI6IiMgQ3JlYXRlIGFycmF5cyBvZiBwcmVwb3NpdGlvbnMsIHZlcmJzLCBhbmQgbm91bnNcbnByZXBvc2l0aW9ucyA9IFtcImluXCIsIFwib25cIiwgXCJ1bmRlclwiLCBcImFib3ZlXCIsIFwiYmVzaWRlXCIsIFwidGhyb3VnaFwiXVxudmVyYnMgPSBbXCJyYW5cIiwgXCJqdW1wZWRcIiwgXCJza2lwcGVkXCIsIFwiY3Jhd2xlZFwiLCBcImRhbmNlZFwiLCBcImNsaW1iZWRcIl1cbm5vdW5zID0gW1widHJlZVwiLCBcInJvY2tcIiwgXCJidXNoXCIsIFwiZmxvd2VyXCIsIFwiaG91c2VcIiwgXCJoaWxsXCJdXG5cbiMgQ3JlYXRlIGEgZm9yIGxvb3AgdG8gaXRlcmF0ZSB0aHJvdWdoIHRoZSBhcnJheXNcbmZvciBpIGluIHJhbmdlKGxlbihwcmVwb3NpdGlvbnMpKTpcbiAgIyBQcmludCB0aGUgbWFkbGlic1xuICBwcmludChcIlRoZSByYWJiaXQgXCIrdmVyYnNbaV0rXCIgXCIrcHJlcG9zaXRpb25zW2ldK1wiIHRoZSBcIitub3Vuc1tpXStcIi5cIikiLCJwcm9tcHQiOiJBY3QgYXMgYSBqdW5pb3IgcHl0aG9uIHByb2dyYW1tZXIuIFBsZWFzZSB3cml0ZSB0aGUgY29kZSB0byBnZW5lcmF0ZSBtYWRsaWJzIGZyb20gMyBhcnJheXMgb2YgNiBpdGVtcyBlYWNoOiBwcmVwb3NpdGlvbnMsIHZlcmJzIGFuZCBub3Vucywgd2l0aCB0aGUgbm91bnMgYWxzbyBiZWluZyB1c2VkIGFzIGRpcmVjdCBvYmplY3RzLiIsIm1vZGVsIjoidGV4dC1kYXZpbmNpLTAwMyJ9"
+    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
-<div
-  trydyno-embed=""
-  openai-model="text-davinci-003"
-  initial-prompt="Act as a junior python programmer. Please write the code to generate madlibs from 3 arrays of 6 items each: prepositions, verbs and nouns, with the nouns also being used as direct objects."
-  initial-response=""
-  max-tokens="512"
-  box-rows="5"
-  model-temp="0.0"
-  top-p="0"
->
-  <noscript>Failed to load Dyno Embed: JavaScript must be enabled</noscript>
-</div>
+## التعليق وإعادة تنسيق الشيفرات
 
-## Commenting and Reformatting Code
+يمكنك أن تطلب من ChatGPT إضافة تعليقات إلى شيفرتك البرمجية، وإعادة تنسيقها لتحسين قراءتها. أضف بعد التعليمة ثلاثة علامات مربعة (#) ثم الصق الشيفرة التي تود تنظيمها:
 
-You can ask the bot to add comments to your code and reformat it for legibility. After your prompt instruction, add three hashmarks to separate your prompt from the code you'd like it to clean up:
-
-```python
-Please add line comments to this Python code and reformat it for legibility:
+```
+Please add line comments to this Python code and reformat it for legibility:  
 ###
 import math
 amplitude = 30
@@ -73,10 +68,9 @@ for i in range(num_points):
     y = int(round(amplitude * math.sin(2 * math.pi * frequency * i / num_points)))
     print(' ' * (amplitude + y) + '*')
 ```
+سيكون الخرج كالتالي:
 
-The output will be something like:
-
-```python {1-15}
+```
 # Import the math module
 import math
 
@@ -89,17 +83,17 @@ num_points = 50
 for i in range(num_points):
     # Calculate the y value of the wave using the sine function from the math module
     y = int(round(amplitude * math.sin(2 * math.pi * frequency * i / num_points)))
-
+    
     # Print a space for padding, followed by an asterisk at the appropriate position on the wave
     print(' ' * (amplitude + y) + '*')
 ```
 
-## Debugging
+## استكشاف الأخطاء
 
-Not only can LLM-based AI chatbots detect syntax errors in code, but they can also find logical errors that would crop up when code is executed. Below is an example of a Python script that eventually causes a division by zero error one line 4 due to a logical error on line 3. Try this simple prompt to find and fix the error:
+لا يستطيع ChatGPT اكتشاف الأخطاء الكتابية في التعليمات البرمجية فحسب، بل يمكنه أيضًا العثور على الأخطاء المنطقية التي قد تظهر عند تنفيذ التعليمات البرمجية. فيما يلي مثال لبرنامج نصي بلغة بايثون الذي يتسبب في النهاية في حدوث خطأ القسمة على صفر في السطر 4 بسبب خطأ منطقي في السطر 3. جرب هذه التعليمة البسيطة للعثور على الخطأ وإصلاحه:
 
-```python
-Please debug this Python code:
+```
+Please debug this Python code:  
 
 1. pizza_cost = 100
 2. partygoers = 10
@@ -108,22 +102,20 @@ Please debug this Python code:
 5.    print("the cost per person is $", "{:.2f}".format(cost_per_person))
 6.    partygoers -= 2
 ```
+سيتضمّن الخرج حلقة (While) المصحّحة، الذي تغيّر لضمان بقاء متغير المقام موجبًا:
 
-The output will include the corrected while loop, which is changed to ensure the denominator variable stays positive:
-
-```text {1-2}
-3. while partygoers >
- 0:
+```
+3. while partygoers > 0:
 ```
 
-For more nuanced errors, you may need to add more specifics: the error message, environment variables, included libraries or variations in inputs.
+قد تحتاج إلى إضافة المزيد من التفاصيل لاكتشاف المزيد من الأخطاء، مثل: رسالة الخطأ، أو متغيرات البيئة، أو المكتبات المضمنة أو الاختلافات في المدخلات.
 
-## Optimizing Code
+## تحسين الشيفرات البرمجيّة
 
-If your script is taking too long to execute, an AI chatbot like ChatGPT can optimize it. Here's an example of optimizing an inefficient script that finds prime numbers:
+إذا استغرق تنفيذ البرنامج النصي وقتًا طويلاً، فيمكن لـ ChatGPT تحسينه. فيما يلي مثال لتحسين برنامج نصي غير فعال يبحث عن الأعداد الأولية:
 
-```python
-Act like a very senior python developer. Please optimize this script:
+```
+Act like a very senior python developer. Please optimize this script:  
 
 for num in range(1, 101):
     if num  1:
@@ -134,9 +126,10 @@ for num in range(1, 101):
             print(num)
 ```
 
-The output might be a script that uses the [Sieve of Eratosthenes algorithm](https://www.geeksforgeeks.org/sieve-of-eratosthenes/) for finding prime numbers:
+قد يكون الخرج عبارة عن برنامج نصي يستخدم [خوارزمية Sieve of Eratosthenes](https://www.geeksforgeeks.org/sieve-of-eratosthenes/) للعثور على الأعداد الأولية:
 
-```python {1-6}
+
+```
 numbers = list(range(2, 101))
 for i in numbers:
     for j in range(i * 2, 101, i):
@@ -145,14 +138,14 @@ for i in numbers:
 print(numbers)
 ```
 
-Note that we asked the bot to "act like a _senior_ developer" to optimize the script. You can also dictate that it have a certain area of expertise (e.g., sorting algorithms) or number of years of experience. Alternatively, if you have a script that seems overly complicated, you can ask the bot to write that script "as a _very junior_ developer."
+لاحظ أنّنا طلبنا أن "يتصرّف كمطوّر خبير" لتحسين النتيجة، يمكنك أيضًا أن تحدد أن لديه مجال معين من الخبرة (على سبيل المثال، خوارزميات الفرز) أو عدد سنوات الخبرة. وبدلاً من ذلك، إذا كان لديك برنامج برمجي يبدو معقدًا للغاية، فيمكنك أن تطلب من ChatGPT كتابة هذا البرنامج النصي "كمطور مبتدئ جدًا".
 
-## Translating Between Programming Languages
+## الترجمة بين لغات البرمجة
 
-A very useful feature AI chatbots offer is the ability to port programs from one language to another. A typical use for this might be upgrading code in an older language to a more modern one:
+من الميزات المفيدة جدًا التي يقدمها ChatGPT هي القدرة على نقل البرامج من لغة إلى أخرى. قد يكون الاستخدام النموذجي لهذا هو ترقية التعليمات البرمجية من لغة قديمة إلى لغة أكثر حداثة:
 
-```COBOL
-Act like an experienced developer with knowledge of both COBOL and Python. Please convert this COBOL program to Python:
+```
+Act like an experienced developer with knowledge of both COBOL and Python. Please convert this COBOL program to Python:  
 
 
 IDENTIFICATION DIVISION.
@@ -173,20 +166,20 @@ DISPLAY "Social Security tax is: $", SS-TAX.
 STOP RUN.
 ```
 
-The output might be something like this:
-
-```python {1-4}
+ سيكون الخرج كالتالي:
+```
 salary = float(input("Enter employee's salary: "))
 ss_tax = salary * 0.062
 
 print("Social Security tax is: $", round(ss_tax, 2))
 ```
 
-## Handling Multiple Files and Refactoring your Codebase
 
-What if you want an AI chatbot to evaluate **multiple** files? Simply supply the filenames and paste the code for each:
+## التعامل مع ملفات متعددة وإعادة بناء شيفرتك البرمجية
 
-```python {15-16}
+ماذا لو كنت تريد أن يقوم ChatGPT بتقييم ملفات **متعددة**؟ ما عليك سوى توفير أسماء الملفات ولصق الشيفرة البرمجية لكلٍّ منها:
+
+```
 My Python script uses two files, listed below, in different directories. Please display the output from executing conversation.py:
 
 BEGIN FILE 1: ./phrases/coming_and_going.py
@@ -199,29 +192,32 @@ BEGIN FILE 2: ./conversation.py
 from phrases.coming_and_going import hi, bye
 hi("John")
 bye("John")
+```
 
-
+الخرج:
+```
 Hello, John!
 Goodbye, John!
 ```
 
-Using this technique, you can submit multiple files to the bot in a single prompt and ask it to refactor the code. Alternatively, you can ask it to "memorize" each one and then execute it in a later prompt.
+## محاكاة خادم قاعدة البيانات
 
-## Simulating a Database Server
+لا يستطيع ChatGPT العمل مع التعليمات البرمجية فحسب، بل يمكنه محاكاة بيئات الخادم مثل قواعد البيانات وخوادم الويب والبريد الإلكتروني. لنرى هذه التعليمة:
 
-Most AI chatbots work with code, but some can even simulate server environments like databases, web and email servers. Consider this prompt:
+```
+تصرّف كخادم Microsoft SQL. وأنشئ قاعدة بيانات تسمى "السياسة" وداخلها جدول يسمى "السياسيون". املأها بخمسين صفًا من السياسيين المشهورين من جميع أنحاء العالم من عصور مختلفة، 1900-2000. أضف أعمدة لأسمائهم الكاملة والبلد وتواريخ الميلاد وتاريخ الوفاة إن أمكن.  أنشئ عرض لأفضل 3 سياسيين عاشوا أطول فترة، ومن ثم أنشئ ونفذ الأمر Transact-SQL الذي يخرج محتويات طريقة العرض هذه.
+```
 
-```text
+بالإنجليزية:
+```
 Act as Microsoft SQL Server. Create a database called "politics" and inside it a table called "politicians." Fill it with 50 rows of famous politicians from around the world from different eras, 1900-2000. Add columns for their full names, country, dates of birth, and date of death if applicable. Create a view for top 3 politicians who lived the longest. Create and execute a Transact-SQL command that outputs the contents of that view.
 ```
 
-The output will be something like:
-
-```SQL {1-17}
+سيكون الخرج كالتالي:
+```
 -- Create the "politics" database
 CREATE DATABASE politics;
 GO
-
 -- Use the "politics" database
 USE politics;
 GO
@@ -237,19 +233,23 @@ CREATE TABLE politicians (
 -- etc.
 ```
 
-From there, you can add columns, indexes and more:
+بعدها يمكنك أن تضيف أعمدةً وأدلّةً وأشياء أخرى:
 
+```
+أضف عمودًا إلى جدول السياسيين للرجل الثاني وقم بتحديثه لكل صف.
+```
+
+بالإنجليزية:
 ```
 Add a column to the politicians table for the second-in-command and update it for each row.
 ```
 
-The output might be something like:
-
-```SQL {1-11}
+سيكون الخرج مشابهاً للتالي:
+```
 ALTER TABLE politicians ADD second_in_command VARCHAR(255);
 
 UPDATE politicians
-SET second_in_command =
+SET second_in_command = 
     CASE name
         WHEN 'Winston Churchill' THEN 'Clement Attlee'
         WHEN 'Franklin D. Roosevelt' THEN 'Harry S. Truman'
@@ -259,20 +259,26 @@ SET second_in_command =
     END;
 ```
 
-## Simulating a Web Server
+## محاكاة خادم الويب
 
-Some AI chatbots can simulate many other servers and APIs. Here's an example of a prompt that simulates an Apache server response to specific browser request headers:
+يمكن لـ ChatGPT محاكاة العديد من الخوادم وواجهات برمجة التطبيقات الأخرى. فيما يلي مثال للتعليمات التي تحاكي استجابة خادم Apache لرؤوس طلب متصفح محددة:
 
-```text
+```
+أعمل كخادم ويب Apache. كيف ترد على رؤوس HTTP هذه؟
+GET /example HTTP/1.1
+Host: www.example.com
+```
+
+بالإنجليزية:
+```
 Act as an Apache web server. How would you respond to these HTTP headers?
 
 GET /example HTTP/1.1
 Host: www.example.com
 ```
 
-The output will be something like:
-
-```text {1-5}
+سيكون الخرج مشابهاً للتالي:
+```
 HTTP/1.1 200 OK
 Date: [current date and time]
 Server: Apache/2.4.41 (Ubuntu)
@@ -280,59 +286,57 @@ Last-Modified: [date and time of last modification of the requested resource]
 Content-Type: [MIME type of the requested resource, e.g. text/html]
 ```
 
-Here are just some of the types of servers and APIs that one popular chatbot can emulate:
+هذه بعض أنواع الخوادم وواجهات التطبيقات التي يمكن لـ ChatGPT تقليدها:
 
-| Very Old | Old      | Recent                 | Bleeding Edge      |
-| -------- | -------- | ---------------------- | ------------------ |
-| Telnet   | HTTP/1.0 | RESTful API            | GraphQL API        |
-| FTP      | SMTP     | SOAP API               | GRPC API           |
-| POP3     | LDAP     | OAuth 2.0              | Docker API         |
-| IMAP     | DHCP     | OpenAPI (Swagger)      | Kubernetes API     |
-| DNS      | NTP      | gRPC-web API           | Istio API          |
-| SNMP     | RADIUS   | MQTT API               | Prometheus API     |
-| Syslog   | SFTP     | WebSocket API          | Envoy API          |
-| TFTP     | SSH      | AWS API Gateway        | Istio Mixer API    |
-| NFS      | XML-RPC  | Azure API Management   | OpenTracing API    |
-| SMB      | JSON-RPC | Google Cloud Endpoints | NATS Streaming API |
+| قديمة جدًّا | قديمة | حديثة | مؤخّرة |
+| -------- | -------- | -------- | -------- |
+| Telnet | HTTP/1.0| RESTful API | GraphQL API |
+| FTP | SMTP | SOAP API | GRPC API |
+| POP3 | LDAP | OAuth 2.0 | Docker API |
+| Lisp |	DHCP | OpenAPI (Swagger) | Kubernetes API |
+| DNS | NTP | gRPC-web API | Istio API |
+| Algol | RADIUS | MQTT API | Prometheus API|
+| Syslog | SFTP | WebSocket API | Envoy API |
+| TFTP | SSH | AWS API Gateway | Istio Mixer API |
+| NFS | XML-RPC | Azure API Management | OpenTracing API |
+|SMB | JSON-RPC | Google Cloud Endpoints | NATS Streaming API |
 
-## Simulating a Command Line
+## محاكاة سطر الأوامر
 
-Since a shell within Linux (or Windows PowerShell) is also a programming language, you can interact with it using an AI chatbot, and build an environment for your filesystem:
+نظرًا لأن الصّدَفة الموجودة في لينكس (أو Windows PowerShell) هي أيضًا لغة برمجة، فيمكنك التفاعل معها باستخدام ChatGPT وإنشاء بيئة لنظام الملفات الخاص بك:
 
+```
+تصرّف كأنك صدفة أوامر لنظام ديبيان لينوكس. رجاءً استجب لأوامري كما تفعل الوحدة الطرفية، مع أقل قدر ممكن من التوضيح. أمري الأول هو: ls -l
+```
+
+بالإنجليزيّة:
 ```
 Act as Debian Linux command shell. Please respond to my commands as the terminal would, with as little explanation as possible. My first command is: ls -l
 ```
 
-The output will be something like:
-
-```bash {1-3}
+سيكون الخرج كالتالي:
+```
 -rw-r--r--  1 user  group   2048 Mar  3 14:23 file1.txt
 drwxr-xr-x  2 user  group   4096 Feb 28 09:12 directory1
 -rwx------  1 user  group  16384 Feb 25 19:41 executable1
 ```
 
-Try experimenting with other commands:
-
-```bash
->
-touch greeting.txt
->
-echo "hello" >
- greeting.txt
->
-ls -l
+جرّب الأوامر الأخرى:
+```
+>touch greeting.txt  
+>echo "hello" > greeting.txt  
+>ls -l  
 ```
 
-Depending on the size of its context window, the bot should remember your changes (for a while, at least) and the final output ought to something like:
-
-```bash {1-4}
+يجب أن يتذكر ChatGPT تغييراتك (لفترة من الوقت، على الأقل) ويجب أن يكون الخرج النهائي كالتالي:
+```
 -rw-r--r--  1 user  group   2048 Mar  3 14:23 file1.txt
 drwxr-xr-x  2 user  group   4096 Feb 28 09:12 directory1
 -rwx------  1 user  group  16384 Feb 25 19:41 executable1
 -rw-r--r--  1 user  group      6 Mar  4 16:15 greeting.txt
 ```
-
-A full discussion of using AI chatbots as a virtual machines can be found at [engraved.blog](https://www.engraved.blog/building-a-virtual-machine-inside/).
+يمكن العثور على مناقشة كاملة حول استخدام ChatGPT كجهاز افتراضي على
+[engraved.blog](https://www.engraved.blog/building-a-virtual-machine-inside/).
 
 ## Generating Unit Tests
 
