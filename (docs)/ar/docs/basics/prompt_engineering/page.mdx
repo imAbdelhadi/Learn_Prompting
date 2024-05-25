@@ -1,97 +1,153 @@
 export const metadata = {
   sidebar_position: 20,
-  title: "🟢 Prompt Engineering",
+  title: "🟢 هندسة الأوامر",
 };
 
-# 🟢 Prompt Engineering
+# 🟢 هندسة التعليمات
 
-<Takeaways>- What is prompt engineering?</Takeaways>
+<Takeaways>- ماذا تعني هندسة التعليمات?</Takeaways>
 
-## What Happens When a Prompt Doesn't Work?
+## ماذا يحصل إذا لم تعمل الأوامر؟
 
-Sometimes Gen AIs give incorrect outputs to prompts. For example, they are not very good at multiplying numbers, and will often confidently give you an incorrect answer. Try giving the following prompt to ChatGPT:
+بعض تقنيات الذكاء الاصطناعي التوليدي تقدم مخرجات خاطئة للتعليمات. مثلًا، هي ليست جيدة في عمليات ضرب الأرقام وتقدم إجابات خاطئة بكل ثقة. جرب إعطاء التعليمة التالية لـ ChatGPT
 
-<AIInput>What is 923 * 99?</AIInput>
 
-<AIOutput>923 * 99 equals 91,677.</AIOutput>
-
-ChatGPT gave an incorrect answer (the correct answer is 91,377). We can modify our prompt, and tell ChatGPT to think through its steps.
-
+التعليمة:
 <AIInput>
-What is 923 * 99? Let's go step by step. Always write out the full number of 0s for each term.
+ما هو حاصل ضرب 923*99؟
 </AIInput>
-<AIOutput>
+
+بالإنجليزية:
+<AIInput>
+What is 923 * 99?
+</AIInput>
+الخرج:
+<AIInput>
+حاصل ضرب 923*99 يساوي 91677
+</AIInput>
+
+بالإنجليزية:
+<AIInput>
+923 * 99 equals 91,677.
+</AIInput>
+
+أعطى ChatGPT إجابة خاطئة (الإجابة الصحيحة هي 91377). يمكن تعديل التعليمة للطلب من ChatGPT التأكد من خطوات الحل
+
+التعليمة:
+<AIInput>
+ما هو حاصل ضرب 923*99؟ لنتأكد خطوة بخطوة. أكتب الرقم كاملًا مع الأصفار لكل خطوة
+</AIInput>
+
+بالإنجليزية:
+<AIInput>
+What is 923 * 99? Let's go step by step. Always write out the full number of 0’s for each term.
+</AIInput>
+
+الخرج:
+<AIInput>
+يمكننا تجزئة عملية ضرب 923 بـ 99 إلى خطوات صغيرة
+الخطوة 1: كتابة الرقم كاملًا مع الأصفار لكل خطوة
+
+الخطوة 2: ضرب أول رقم بالعدد 9: 
+923*9= 8307
+
+الخطوة 3: ضرب أول قسم بالعدد 90 (إضافة صفر واحد)
+923*90=83070
+
+الخطوة 4: إضافة النتيجة من الخطوة 2 والخطوة 3:
+8307+83070= 91377
+
+وبالتالي يكون حاصل ضرب 923 بـ 99 يساوي 91377
+</AIInput>
+بالإنجليزية:
+<AIInput>
 To multiply 923 by 99, we can break it down into smaller steps:
 
 Step 1: Write out the full number of 0s for each term:
-923 \* 99 = 923 \* 990
+923 * 99 = 923 * 990
 
 Step 2: Multiply the first term by 9:
-923 \* 9 = 8307
+923 * 9 = 8307
 
 Step 3: Multiply the first term by 90 (adding one 0):
-923 \* 90 = 83070
+923 * 90 = 83070
 
 Step 4: Add the results from step 2 and step 3:
 8307 + 83070 = 91377
 
 Therefore, 923 multiplied by 99 is equal to 91,377.
-
-</AIOutput>
-
-Surprisingly, these additional instructions, ChatGPT is able to solve the problem. This worked because ChatGPT wrote out all of its work, and thus did not make mistakes. Gen AI's mathematical abilities can be improved by prompt engineering. Now, let's try a different example.
-
-<Caution>
-  Since ChatGPT is
-  <a href="/docs/basics/configuration_hyperparameters">non-deterministic</a>, even
-  this prompt sometimes won't work. You may see answers like 91,177 or 91,077.
-</Caution>
-
-### ArchaeologistAI Example
-
-This time, we will ask ChatGPT to write a marketing tweet about a new, fictional AI product we are thinking of creating: ArchaeologistAI. ArchaeologistAI tells stories about famous archaeologists.
-
-<AIInput>Write a tweet about ArchaeologistAI</AIInput>
-
-<AIOutput>
-  "🔍 Exciting times ahead with #ArchaeologistAI! This cutting-edge technology
-  is revolutionizing the field of archaeology, helping us uncover ancient
-  mysteries and piece together our past like never before. Can't wait to see
-  what hidden treasures and insights it unveils! #AI #Archaeology"
-</AIOutput>
-
-This Tweet is not accurate, since ArchaeologistAI only tells stories, and does not discover new things. However, this is not ChatGPT's fault! It did not know anything about ArchaeologistAI. Let's include relevant information in the prompt.
-
-<AIInput>
-  Write a tweet about ArchaeologistAI: ArchaeologistAI tells stories about
-  famous archaeologists.
 </AIInput>
 
-<AIOutput>
-  "🔍 Unearth the captivating tales of legendary archaeologists with
-  #ArchaeologistAI! From Indiana Jones to Mary Leakey, this AI-powered
-  storyteller brings their adventures to life, shedding light on their
-  groundbreaking discoveries and inspiring the next generation of explorers. 🌍
-  #Archaeology"
-</AIOutput>
+هذه التعليمات الإضافية جعلت ChatGPT يحل المسألة بشكل مفاجئ. عمل ذلك بشكل صحيح لأن ChatGPT كتب كل خطوات الحل ولم يُخطئ. وبالتالي يمكن تحسين قدرات الذكاء الاصطناعي التوليدي في المسائل الرياضية عن طريق هندسة التعليمات. لنجرب الآن مثال آخر.
 
-This is much better! Now let's try to make ChatGPT write the Tweet in the style of Indiana Jones.
+> تحذير: ربما لا تعمل هذه التعليمة بشكل صحيح لأن ChatGPT غير حتمي. ستجد إجابات مثل 91177 أو 91077
 
+## مثال ذكاء عالم الآثار الاصطناعي ArchaeologistAI
+
+سنطلب هذه المرة من ChatGPT كتابة تغريدة تسويقية عن منتج ذكاء اصطناعي خيالي جديد نريد إنشائه اسمه ذكاء عالم الآثار الاصطناعي ArchaeologistAI الذي يتحدث عن قصص عن علماء الآثار المشاهير.
+
+التعليمة:
 <AIInput>
-  Write a tweet about ArchaeologistAI, in the style of Indiana Jones:
-  ArchaeologistAI tells stories about famous archaeologists.
+اكتب تغريدة عن ArchaeologitsAI
 </AIInput>
 
-<AIOutput>
-  "Grab your fedora and whip, folks! 🎩🔥 ArchaeologistAI is like having a
-  personal Sallah by your side, sharing captivating tales of legendary
-  archaeologists who've braved ancient tombs and unearthed hidden treasures!
-  🗺️💎 Get ready to embark on a digital adventure through history!
-  #ArchaeologistAI #UnearthTheLegends"
-</AIOutput>
+بالإنجليزي:
+<AIInput>
+Write a tweet about ArchaeologistAI
+</AIInput>
 
-Alright, that may be the message we need to target archaeology fans! By testing multiple prompts, we can see which one gives the best output.
+الخرج:
+<AIInput>
+"تنتظرنا أوقات مثيرة مع #ArchaeologistAI! قامت هذه التقنية بثورة في عالم علم الآثار للمساعدة في كشف الألغاز القديمة وتجميع الماضي بشكل غير مسبوق. لا نستطيع الانتظار لرؤية الكنوز المخفية والمعرفة التي يقدمها! #AI #Archaeology
+</AIInput>
 
-## Conclusion
+بالإنجليزية:
+<AIInput>
+"🔍 Exciting times ahead with #ArchaeologistAI! This cutting-edge technology is revolutionizing the field of archaeology, helping us uncover ancient mysteries and piece together our past like never before. Can't wait to see what hidden treasures and insights it unveils! #AI #Archaeology"
+</AIInput>
+إن هذه التغريدة غير دقيقة لأن ArchaeologistAI يحكي قصصًا فقط ولا يكتشف أي شيء جديد، إلا أن هذا ليس خطأً من ChatGPT! لأنه لا يعرف شيئًا عن ArchaeologistAI. لنضف بعض المعلومات في التعليمة.
 
-This process of refining our prompt over time is known as prompt engineering. You will never write the perfect prompt on your first try, so it is important to get good at refining your prompt. Being good at prompt engineering mostly comes from lots of practice (trial and error). The rest of the articles in this section will introduce you to different prompting strategies which you can use in your prompt engineering process.
+التعليمة:
+<AIInput>
+اكتب تغريدة عن ArchaeologitsAI الذي يتحدث عن علماء آثار مشهورين
+</AIInput>
+
+بالإنجليزية:
+<AIInput>
+Write a tweet about ArchaeologistAI: ArchaeologistAI tells stories about famous archaeologists.
+</AIInput>
+
+الخرج:
+<AIInput>
+"اكتشف القصص المثيرة لعلماء الآثار الأسطوريين باستخدام #ArchaeologistAI من إنديانا جونز إلى ماري ليكي، يعيد حاكي القصص المدعوم من الذكاء الاصطناعي هذه المغامرات إلى الحياة ويسلط الضوء على إنجازاتهم الفريدة ويلهم الجيل الجديد من المكتشفين #Archaeology"
+</AIInput>
+
+بالإنجليزية:
+<AIInput>
+"🔍 Unearth the captivating tales of legendary archaeologists with #ArchaeologistAI! From Indiana Jones to Mary Leakey, this AI-powered storyteller brings their adventures to life, shedding light on their groundbreaking discoveries and inspiring the next generation of explorers. 🌍 #Archaeology"
+</AIInput>
+هذا أفضل بكثير! الآن لنجرب كتابة التغريدة بطريقة إنديانا جونز
+
+التعليمة:
+<AIInput>
+اكتب تغريدة عن ArchaeologitsAI بطريقة إنديانا جونز الذي يتحدث عن علماء آثار مشهورين
+</AIInput>
+
+بالإنجليزية:
+<AIInput>
+Write a tweet about ArchaeologistAI, in the style of Indiana Jones: ArchaeologistAI tells stories about famous archaeologists.
+</AIInput>
+
+الخرج:
+<AIInput>
+"ارتدوا القبعة والسوط يا أصدقاء! إن ArchaeologistAI هو بمثابة وجود صلاح معكم ليشارك معكم قصص علماء الآثار الأسطوريين الذين واجهوا القبور القديمة واكتشفوا الكنوز المخفية! استعدوا للسفر في رحلة رقمية عبر التاريخ! #ArchaeologistAI #UnearthTheLegends
+</AIInput>
+
+بالإنجليزية:
+<AIInput>
+"Grab your fedora and whip, folks! 🎩🔥 ArchaeologistAI is like having a personal Sallah by your side, sharing captivating tales of legendary archaeologists who've braved ancient tombs and unearthed hidden treasures! 🗺️💎 Get ready to embark on a digital adventure through history! #ArchaeologistAI #UnearthTheLegends"
+</AIInput>
+حسنًا، هذه الرسالة المبتغاة لاستهداف محبي علم الآثار! نختار الخرج الأفضل بعد تجريب العديد من التعليمات.
+
+## الخاتمة
+إن عملية تحسين التعليمات مع الوقت تدعى هندسة التعليمات. لن تستطيع كتابة تعليمة ممتازة من أول مرة، لذا من الضروري أن تحسن التعليمة. إن مهارة هندسة التعليمات تأتي مع الكثير من التجربة (التجربة والخطأ). سنتحدث تاليًا عن استراتيجيات كتابة التعليمات التي يمكن استخدامها في عملية هندسة التعليمات.
