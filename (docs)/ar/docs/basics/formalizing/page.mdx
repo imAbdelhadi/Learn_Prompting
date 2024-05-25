@@ -1,9 +1,9 @@
 export const metadata = {
   sidebar_position: 90,
-  title: "🟢 Formalizing Prompts",
+  title: "🟢 إضفاء الطابع الرسمي على التعليمات",
 };
 
-# 🟢 Formalizing Prompts
+# 🟢 إضفاء الطابع الرسمي على التعليمات
 
 <div style={{ textAlign: "center" }}>
   <Image
@@ -20,46 +20,60 @@ export const metadata = {
 </div>
 <br />
 
-<Takeaways>- Understand the basic parts of a prompt</Takeaways>
+<Takeaways>- فهم الأجزاء الأساسية للتعليمة</Takeaways>
 
-We have now covered multiple types of prompts, as well as ways to combine them. This lesson will provide you with terms to explain different types of prompts. Although there have been approaches to formalize discourse around prompt engineering(@white2023prompt), the field is ever changing, so we will provide you with just enough information to get started.
+لقد تعلّمنا لحد الآن أنواعًا متعددة من التعليمات، وكيفية جمع عدة أوامر بتعليمة واحدة. ستتعلم في هذا الدرس مصطلحات لشرح أنواع مختلفة من التعليمات. على الرغم من إيجاد طرق لإضفاء الطابع الرسمي على الحوار في مجال هندسة الأوامر، إلا أن هذا المجال يتغير باستمرار، لذا سنقدم لك معلومات كافية للبدء فقط.
 
-## Parts of a Prompt
+## أجزاء التعليمة
+هناك بضعة أجزاء مختلفة في التعليمة ستراها مرارًا وتكرارًا. تتكون بشكل عام من:
+*  دور
+* توجيه/مهمة
+* سؤال
+* سياق
+* أمثلة (عديدة الأمثلة)
 
-There are a few different parts of a prompt that you will see over and over again. They are roughly:
+لقد تناولنا الأدوار والتوجيهات والأمثلة في الدروس السابقة. يعتبر السؤال ببساطة سؤالًا (على سبيل المثال: ما هي عاصمة فرنسا؟). يُعتبر السياق أية معلومات ذات صلة ترغب في أن يستخدمها نموذج الذكاء الاصطناعي عند الإجابة على السؤال/تنفيذ التوجيه.
 
-- A role
-- An instruction/task
-- A question
-- Context
-- Examples (few-shot)
+ليست جميع هذه العناصر موجودة في كل تعليمة، وعند حدوث ذلك، لا يوجد ترتيب معياري لها. على سبيل المثال، ستؤدي التعليمتان التاليتان، التي تحتوي كل منهما على دور وتوجيه وسياق، إلى نفس الغرض تقريبًا:
 
-We have covered roles, instructions, and examples in previous lessons. A question is simply a question (E.g. `what is the capital of France?`). Context is any relevant information that you want the model to use when answering the question/performing the instruction.
+التعليمة 1:
+<AIOutput>
+أنت طبيب. اقرأ هذا التاريخ الطبي وتنبأ بالمخاطر المحتملة للمريض.
 
-Not all of these occur in every prompt, and when some do occur, there is no standard order for them. For example, the following two prompts, which each contain a role, an instruction, and context, will do roughly the same thing:
+1 يناير 2000: كسر في الذراع الأيمن أثناء لعب كرة السلة. تم علاجه بالجبيرة.
+15 فبراير 2010: تشخيص ارتفاع ضغط الدم. تم وصف دواء ليسينوبريل.
+10 سبتمبر 2015: إصابة بالتهاب رئوي. تم علاجه بالمضادات الحيوية وشفاء تام.
+1 مارس 2022: تعرض لارتجاج في حادث سيارة. تم قبوله في المستشفى ومراقبته لمدة 24 ساعة.
+</AIOutput>
 
-<AIInput>
-You are a doctor. Read this medical history and predict risks for the patient.
+بالإنجليزية:
+<AIOutput>
+ You are a doctor. Read this medical history and predict risks for the patient.
 
 January 1, 2000: Fractured right arm playing basketball. Treated with a cast.
 February 15, 2010: Diagnosed with hypertension. Prescribed lisinopril.
 September 10, 2015: Developed pneumonia. Treated with antibiotics and recovered fully.
 March 1, 2022: Sustained a concussion in a car accident. Admitted to the hospital and monitored for 24 hours.
+</AIOutput>
 
-</AIInput>
-
-<AIInput>
-January 1, 2000: Fractured right arm playing basketball. Treated with a cast.
-February 15, 2010: Diagnosed with hypertension. Prescribed lisinopril.
-September 10, 2015: Developed pneumonia. Treated with antibiotics and recovered fully.
-March 1, 2022: Sustained a concussion in a car accident. Admitted to the hospital and monitored for 24 hours.
+التعليمة 2:
+<AIOutput>
+ 1 يناير 2000: كسر في الذراع الأيمن أثناء لعب كرة السلة. تم علاجه بالجبيرة.
+15 فبراير 2010: تشخيص ارتفاع ضغط الدم. تم وصف دواء ليسينوبريل.
+1 سبتمبر 2015: إصابة بالتهاب رئوي. تم علاجه بالمضادات الحيوية وشفاء تام.
+1 مارس 2022: تعرض لارتجاج في حادث سيارة. تم قبوله في المستشفى ومراقبته لمدة 24 ساعة.
+أنت طبيب. اقرأ هذا التاريخ الطبي وتنبأ بالمخاطر المحتملة للمريض.
+</AIOutput>
+بالإنجليزية:
+<AIOutput>
+January 1, 2000: Fractured right arm playing basketball. Treated with a cast. February 15, 2010: Diagnosed with hypertension. Prescribed lisinopril. September 10, 2015: Developed pneumonia. Treated with antibiotics and recovered fully. March 1, 2022: Sustained a concussion in a car accident. Admitted to the hospital and monitored for 24 hours.
 
 You are a doctor. Read this medical history and predict risks for the patient.
+</AIOutput>
 
-</AIInput>
 
-However, we prefer the second prompt, since the instruction is the last part of the prompt. This is preferable, since with the first prompt, the LLM might just start writing more context instead of following the instruction; if given the first prompt, the LLM might add a new line: `March 15, 2022: Follow-up appointment scheduled with neurologist to assess concussion recovery progress.`
+ومع ذلك، نفضل التعليمة الثانية، حيث يكون التوجيه هو الجزء الأخير من التعليمة. وهذا هو الأفضل، لأنه إذا أُعطي التعليمة الأولى، قد يبدأ النموذج في كتابة المزيد من السياق بدلاً من اتباع التوجيه. إذا أُعطي التعليمة الأولى، قد يضيف النموذج سطرًا جديدًا: 15 مارس 2022: تم تحديد موعد متابعة مع أخصائي بالأمراض العصبية لتقييم تقدم شفاء الارتجاج.
 
-## Conclusion
+## الخاتمة 
+فهم هيكلية ومكونات التعليمة ضروري للاستفادة من النماذج اللغوية بشكل فعال. تشمل الأجزاء الرئيسية للتعليمة دورًا، توجيهًا أو مهمة، سؤالًا، سياقًا، وأمثلة. لن تحتوي جميع التعليمات على كل هذه العناصر، وترتيبها يمكن أن يختلف. ومع ذلك، يُفضّل عمومًا وضع التوجيه في نهاية التعليمة لضمان تركيز النموذج على تنفيذ المهمة بدلاً من تكملة السياق. مع استمرار تطور مجال هندسة الأوامر، توفر هذه المبادئ أساسًا قويًا لصياغة تعليمات فعالة.
 
-Understanding the structure and components of a prompt is crucial in effectively utilizing language models. The key parts of a prompt include a role, an instruction or task, a question, context, and examples. Not all prompts will contain all these elements, and their order can vary. However, it's generally preferable to place the instruction last to ensure the model focuses on executing the task rather than extending the context. As the field of prompt engineering continues to evolve, these principles provide a solid foundation for crafting effective prompts.
